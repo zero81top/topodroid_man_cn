@@ -1,84 +1,82 @@
 <html><body>
-<h3>[5] DistoX CALIBRATION DATA</h3>
+<h3>[5] DistoX校准数据</h3>
 
-<b>Only for DistoX, DistoX2, and DistoXBLE</b><br><p>
+<b>仅适用于DistoX、DistoX2和DistoXBLE</b><br><p>
 
-The <u>Calibration Data window</u> displays the list of calibration data. If the calibration has no data, the window is empty but for the top buttons. Each calibration data line contains the following data information:
+<u>校准数据窗口</u>显示校准数据列表。如果校准没有数据，窗口除了顶部按钮外是空的。
+每个校准数据行包含以下数据信息：
 <ul style="margin-top=0">
-<li>index: incremental index that identifies the data</li>
-<li>group: number of the group the data belongs to</li>
-<li>error: the difference between the calibration-corrected direction and the group average direction, in degrees</li>
-<li>azimuth, inclination, and roll, computed from the raw values without any calibration correction</li>
-<li>optionally the raw calibration data values, ie, the components of G and M in the DistoX frame, either as decimal or hex values</li>
+<li>索引：标识数据的递增索引</li>
+<li>组：数据所属的组编号</li>
+<li>误差：校准校正方向与组平均方向之间的差异，以度为单位</li>
+<li>方位、倾角和横滚角，从原始值计算得出，不带任何校准修正</li>
+<li>可选择的原始校准数据值，即DistoX坐标系中的G和M的分量，可以是十进制或十六进制值</li>
 </ul><br><p>
 
-<h4>Colors</h4>
-The calibration data are displayed with yellow and blue text-color, alternating between even and odd group numbers. Data with no group are grey.<br><p>
+<h4>颜色</h4>
+校准数据以黄色和蓝色文本颜色显示，奇偶组编号之间交替显示。没有组的数据为灰色。<br><p>
 
-The data values background color are:
+数据值的背景颜色为：
 <ul>
-<li>black: normal values</li>
-<li>violet: incomplete data (not used in the calibration, but used for the groups)</li>
-<li>brown: saturated data</li>
-<li>gray: deleted data (only if deleted data are displayed)</li>
-<li>red: data with error larger than 1&deg;</li>
-<li>green: data differing from the group average value by more than the <i>group tolerance</i></li>
+<li>黑色：正常值</li>
+<li>紫色：不完整的数据（在校准中未使用，但用于组）</li>
+<li>棕色：饱和数据</li>
+<li>灰色：已删除的数据（仅在显示已删除数据时显示）</li>
+<li>红色：误差大于1&deg;的数据</li>
+<li>绿色：与组平均值相差大于<i>组容差</i>的数据</li>
 </ul><br><p>
 
-<h4>ACTIONS</h4>
+<h4>操作</h4>
 <ul style="margin-top=0">
-<li>tap on a data: calibration data edit dialog</li>
+<li>点击数据：校准数据编辑对话框</li>
 </ul><br><p>
 
-<h4>BUTTONS</h4>
+<h4>按钮</h4>
 <ul style="margin-top=0">
-<li><img src="btn_toggle.png" width="36" border="1"> toggle the DistoX calibration mode on and off (It may fail at the first try)</li>
-<li><img src="btn_bluetooth.png" width="36" border="1"> reset BT, or control DistoX remotely</li>
-<li><img src="btn_download.png" width="36" border="1"> download calibration data from the DistoX</li>
-<li><img src="btn_numbers.png" width="36" border="1"> assign <a href="page_groups.htm">group</a> numbers to the data, or reset the group numbers</li>
-<li><img src="btn_compute.png" width="36" border="1"> compute the <a href="page_calib_coeffs.htm">calibration coefficients</a></li>
-<li><img src="btn_cover.png" width="36" border="1"> <a href="page_calib_distrib.htm">direction distribution</a> of the calibration data</li>
-<li><img src="btn_read.png" width="36" border="1"> read and display the coefficients stored in the DistoX</li>
-<li><img src="btn_write.png" width="36" border="1"> write the calibration coefficients to the DistoX. Enabled only after the calibration coefficients have been computed. The coefficients can also be written directly from the dialog showing the result of the computation. A warning is issued in the data direction coverage is below 95% or the average error is above 0.5&deg;</li>
-<li><img src="btn_search.png" width="36" border="1"> opens the search dialog</li>
+<li><img src="btn_toggle.png" width="36" border="1">打开或关闭DistoX校准模式（第一次尝试可能失败）</li>
+<li><img src="btn_bluetooth.png" width="36" border="1">重置蓝牙或远程控制DistoX</li>
+<li><img src="btn_download.png" width="36" border="1">从DistoX下载校准数据</li>
+<li><img src="btn_numbers.png" width="36" border="1">为数据分配<a href="page_groups.htm">组</a>编号，或重置组编号</li>
+<li><img src="btn_compute.png" width="36" border="1">计算<a href="page_calib_coeffs.htm">校准系数</a></li>
+<li><img src="btn_cover.png" width="36" border="1">校准数据的<a href="page_calib_distrib.htm">方向分布</a></li>
+<li><img src="btn_read.png" width="36" border="1">读取并显示存储在DistoX中的系数</li>
+<li><img src="btn_write.png" width="36" border="1">将校准系数写入DistoX。只有在计算出校准系数后才能启用此功能。也可以直接从显示计算结果的对话框中写入系数。如果数据方向覆盖率低于95%或平均误差超过0.5&deg;，则会发出警告。</li>
+<li><img src="btn_search.png" width="36" border="1">打开搜索对话框</li>
 </ul><br><p>
 
-At the moment only on-demand data download is active for the calibration data. The downloaded data are added to the current calibration. Therefore you can take some calibration measurements, download the data, check if you are satisfied with them, if not take further data and download them, and so on until you are happy with your calibration data. Downloaded data can be "disabled" (by setting the group number to "0" (zero); 
-disabled data are not used in the computation of calibration coefficients), or deleted (usually not shown in the list of data).
-Deleted data are not taken into account in the group-number assignment and in the computation of the calibration.<br><p>
+目前，校准数据的仅在需求时下载功能处于激活状态。
+下载的数据将添加到当前校准。因此，您可以进行一些校准测量，下载数据，检查是否满意，如果不满意，则进一步采集数据并下载，依此类推，直到满意为止。
+下载的数据可以"禁用"（将组编号设置为"0"），禁用数据不会用于计算校准系数），或删除（通常不显示在数据列表中）。
+删除的数据在分组编号分配和校准计算中不予考虑。<br><p>
 
-<h4>Bluetooth</h4>
-This button resets the TopoDroid bluetooth connection.<br>
-It also lets the user control the DistoX remotely [A]: turn on or off the laser, and take a calibration shot.
-The data is immediately downloaded if the the DistoX data connection mode is set to "continuous".<br>
-In this case it is also possible to take (and download) a group of four calibration shots with a small delay between them
-(controlled by the settings "Laser pause" and "Shot pause").<br><p>
+<h4>蓝牙</h4>
+此按钮重置TopoDroid蓝牙连接。<br>
+它还允许用户远程控制DistoX[A]：打开或关闭激光，进行校准拍摄。
+如果DistoX数据连接模式设置为"continuous"，则数据会立即下载。
+在这种情况下，还可以在四次校准拍摄之间进行一小段延迟的组合校准拍摄（由设置"激光暂停"和"拍摄暂停"控制）。
+在TopoDroid进行校准拍摄时，蓝牙按钮将被禁用。<br><p>
 
-The bluetooth button is disabled while TopoDroid is taking a calibration shot.<br><p>
+<h4>校准计算</h4>
+"齿轮"按钮开始计算校准系数。<br>
+计算结束后，将显示系数对话框。<br>
+如果没有足够的数据或数据组，计算不会进行，并显示警告消息。<br>
+如果在计算结束之前达到迭代次数限制，则校准失败。通常发生在组编号设置错误的情况下。此时将显示一条消息。<br><p>
 
-<h4>Calibration computation</h4>
-The "gear" button starts the computation of the calibration coefficients.<br>
-When the computation ends, the coefficient dialog is shown.<br>
-If there are not enough data or data groups the computation is not carried out and a warning message is displayed.<br>
-The calibration fails if the limit of the iteration is reached before the computation ends.
-This usually happens if the group numbers have been set wrongly.
-In this case a message is displayed.<br><p>
-
-<h4>Warnings</h4>
-<ul style=margin-top=0">
-<li><b>saturated data</b>: data with abnormal magnetic field value. A possible cause of this is the presence of spurious magnetic fields. Saturated data have a brown background</li>
-<li><b>zero data</b>: incorrectly received calibration data. The data has zero values, and by default it is not assigned a number, although it is used in computing the groups. Zero data have a violet background</li>
-</ul><br><p>
-
-<h4>MENUS</h4>
+<h4>警告</h4>
 <ul style="margin-top=0">
-<li><u>Show/hide deleted</u>: whether to display all data including the deleted data</li>
-<li><u>Validate</u>: <a href="page_validation.htm">validation</a> of this calibration with another one</li>
-<li><u>Settings</u>: same as for the <u>Calibration Info window</u></li>
-<li><u>Help</u></li>
+<li><b>饱和数据</b>：具有异常磁场值的数据。可能的原因是存在伪磁场。饱和数据的背景为棕色</li>
+<li><b>零数据</b>：错误接收的校准数据。数据具有零值，默认情况下不会分配编号，但用于计算组。零数据的背景为紫色</li>
 </ul><br><p>
 
-<a href="manual04.htm">&lt; Calibration Info window</a> |
-<a href="manual06.htm">Survey Data window &gt;</a>
+<h4>菜单</h4>
+<ul style="margin-top=0">
+<li><u>显示/隐藏已删除</u>：是否显示所有数据，包括已删除的数据</li>
+<li><u>验证</u>：将此校准与其他校准进行<a href="page_validation.htm">验证</a></li>
+<li><u>设置</u>：与<u>校准信息窗口</u>相同</li>
+<li><u>帮助</u></li>
+</ul><br><p>
+
+<a href="manual04.htm">&lt; 校准信息窗口</a> |
+<a href="manual06.htm">测量数据窗口 &gt;</a>
 
 </body></html>

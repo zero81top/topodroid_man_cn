@@ -1,51 +1,51 @@
 <html><body>
-<h3>[4] DistoX CALIBRATION WINDOW</h3>
+<h3>[4] DistoX校准窗口</h3>
 
-<b>Only for DistoX, DistoX2, and DistoXBLE</b><br><p>
+<b>仅适用于DistoX、DistoX2和DistoXBLE</b><br><p>
 
-Tapping the <i>Calibration</i> button in the <u>Device window</u> shows the lists of the 
-<a href="page_calib_dialog.htm">calibrations</a> of the active device. You can open a calibration or
-create a new one. In both cases you are led to the <u>Calibration Info window</u>.<br><p>
+在<u>设备窗口</u>中点击<i>校准</i>按钮，显示活动设备的<a href="page_calib_dialog.htm">校准</a>列表。
+您可以打开一个校准或创建一个新的校准。在这两种情况下，您将进入<u>校准信息窗口</u>。<br><p>
 
-The <u>Calibration Info window</u> has text fields for
+<u>校准信息窗口</u>具有以下文本字段：
 <ul style="margin-top=0">
-<li>the name. Each calibration must have a unique name</li>
-<li>the date.</li>
-<li>a description</li>
-<li>the magnetic dip [degrees], if computed by the calibration algorithm</li>
+<li>名称。每个校准必须有唯一的名称</li>
+<li>日期</li>
+<li>描述</li>
+<li>磁倾角[度]，如果由校准算法计算出来的</li>
 </ul>
-and radio buttons for the calibration algorithm. By default this is set to "auto" (ie, let TopoDroid decide which algorithm to use).<br><p>
+以及用于选择校准算法的单选按钮。默认情况下，该设置为"auto"（即，让TopoDroid决定使用哪个算法）。<br><p>
 
-<h4>BUTTONS</h4>
+<h4>按钮</h4>
 <ul style="margin-top=0">
-	<li><img src="btn_save.png" width="36" border="1"> save the calibration information to the database</li>
-	<li><img src="btn_open.png" width="36" border="1"> go to the <u>Calibration Data window</u></li>
-	<li><img src="btn_read.png" width="36" border="1"> display the calibration coefficients stored in the database</li>
+	<li><img src="btn_save.png" width="36" border="1">将校准信息保存到数据库</li>
+	<li><img src="btn_open.png" width="36" border="1">转到<u>校准数据窗口</u></li>
+	<li><img src="btn_read.png" width="36" border="1">显示存储在数据库中的校准系数</li>
 </ul><br><p>
 
-<h4>MENUS</h4>
+<h4>菜单</h4>
 <ul style="margin-top=0">
-<li><a href="page_calib_import.htm">Export</a> the calibration</li>
-<li><u>Delete</u> the calibration and its data from the database (non-recoverable action)</li>
-<li><u>Settings</u></li>
-<li><u>Help</u></li>
+<li><a href="page_calib_import.htm">导出</a>校准</li>
+<li><u>删除</u>校准及其数据从数据库中（不可恢复的操作）</li>
+<li><u>设置</u></li>
+<li><u>帮助</u></li>
 </ul><br><p>
 
-<h4>CALIBRATION SETTINGS (DistoX only)</h4>
+<h4>校准设置（仅适用于DistoX）</h4>
 <ul style="margin-top=0">
-<li><i>Group policy</i>: how to split the calibration data into <a href="page_groups.htm">groups</a> [default "Four at a time"]</li>
-<li><i>Group tolerance</i>: threshold to highlight calibration data with large angle distance from the group-mean [default 40 min 0]</li>
-<li><i>Algorithm error</i>: the computation of the coefficients ends if the variation of every coefficient during an iteration step is smaller than this value [default 10<sup>-6</sup>, min 0].</li>
-<li><i>Algorithm iterations</i>: the maximum number of iteration of the calibration algorithm [default 200, min 50].</li>
-<li><i>Download remote data</i> immediate download.</li>
-<li><i>Raw data</i>: by default TopoDroid displays the azimuth, inclination, and roll. Select if you want to see also the raw calibration data (the components of G and M), either decimal or hex. [default "no"]</li>
-<li><i>Algorithm</i>: can be 0 (auto), 1 (linear), 2 (non-linear). If a calibration algorithm is left "auto", and this setting is not "auto", then the algorithm of the settings is used to calculate the calibration. If they are both "auto" the algorithm is chosen automatically by TopoDroid depending on the DistoX model and firmware. [default "auto"]</li>
+<li><i>分组策略</i>：如何将校准数据分为<a href="page_groups.htm">组</a>[默认"一次四组"]</li>
+<li><i>组容差</i>：高亮显示与组均值角度差距较大的校准数据的阈值[默认40，最小0]</li>
+<li><i>算法误差</i>：在迭代步骤中，每个系数的变化小于此值时，计算系数的计算结束[默认10<sup>-6</sup>，最小0]</li>
+<li><i>算法迭代次数</i>：校准算法的最大迭代次数[默认200，最小50]</li>
+<li><i>下载远程数据</i>：立即下载。</li>
+<li><i>原始数据</i>：默认情况下，TopoDroid会显示方位、倾角和横滚角。选择是否还要查看原始校准数据（G和M的分量），可以是十进制或十六进制[默认"no"]</li>
+<li><i>算法</i>：可以是0（自动）、1（线性）、2（非线性）。如果将校准算法设置为"auto"，并且此设置不是"auto"，则使用设置的算法计算校准。
+如果它们都是"auto"，则TopoDroid将根据DistoX型号和固件自动选择算法[默认"auto"]</li>
 </ul><br><p>
 
-<a href="page_calib_howto.htm">Calibration howto</a><br>
+<a href="page_calib_howto.htm">校准指南</a><br>
 <p>
 
-<a href="manual03.htm">&lt; Device window</a> |
-<a href="manual05.htm">Calibration Data window &gt;</a>
+<a href="manual03.htm">&lt; 设备窗口</a> |
+<a href="manual05.htm">校准数据窗口 &gt;</a>
 
 </body></html>

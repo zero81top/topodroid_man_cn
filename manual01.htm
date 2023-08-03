@@ -1,107 +1,103 @@
 <html><body>
-<h3>[1] INTRODUCTION</h3>
+<h3>[1] 简介</h3>
 
-<h4>Activity levels</h4>
-The TopoDroid interface has activity levels, differing by the number of actions that are enabled.
+<h4>活动级别</h4>
+TopoDroid界面具有活动级别，根据启用的动作数量而不同。
 <ul style="margin-top=0">
-<li>At the <b>basic</b> level [B] drawing is limited to lines, with no editing actions.</li>
-<li>The <b>normal</b> level [N] contains all the functions for a detailed cave survey.</li>
-<li>The <b>advanced</b> level [A] has also advanced functions.</li>
-<li>The <b>expert</b> level [E] has all the functions.</li>
-<li>The <b>tester</b> level [T] is only for testing. It has untested features that are partly debugged and may crash the app.</li>
-<li>Features at <b>developer</b> level [D] are enabled only in debug build of the app.</li>
+<li><b>基本</b>级别[B]仅限于绘制线，没有编辑功能。</li>
+<li><b>正常</b>级别[N]包含所有详细的洞穴测量功能。</li>
+<li><b>高级</b>级别[A]还具备高级功能。</li>
+<li><b>专家</b>级别[E]包含所有功能。</li>
+<li><b>测试</b>级别[T]仅供测试使用。它具有未经测试的功能，部分已经进行了调试，但可能会导致应用程序崩溃。</li>
+<li><b>开发者</b>级别[D]仅在应用程序的调试版本中启用。</li>
 </ul><br>
 
-By default TopoDroid has only the <b>normal</b> functions enabled, but you can switch level,
-according to your needs, without exiting from the program.
-This manual describes the complete TopoDroid.
-Features at a level above "basic" are (usually) marked with the level initial, [N], [A], [E], or [T].<br><p>
+默认情况下，TopoDroid只启用<b>正常</b>功能，但您可以在不退出程序的情况下切换级别，根据您的需要进行调整。
+本手册描述了完整的TopoDroid。在“基本”级别以上的功能（通常）使用级别的首字母标记，例如[N]、[A]、[E]或[T]。<br><p>
 
-<h4>Windows</h4>
-TopoDroid has a <u>Main window</u> from which you can move to other app activities.  The main activities are:
+<h4>窗口</h4>
+TopoDroid有一个<u>主窗口</u>，您可以从主窗口转到其他应用程序活动。主要活动包括：
 <ul style="margin-top=0">
-<li><b>Survey</b> data management (<u>Survey Info</u> and <u>Survey Data</u> windows).</li>
-<li><b>Sketch</b> drafting, <u>Drawing window</u>, is a sub-activity of the Survey activity.</li>
-<li><b>3D viewer</b>.</li>
-<li><b>Device</b> functions, <u>Device window</u></li>
-<li><b>Calibration</b> of DistoX (<u>Calibration Info</u> and <u>Calibration Data</u> windows) is a sub-activity of the Device activity.</li>
-<li><b>Cave projects</b>.</li>
+<li>测量数据管理（<u>测量信息</u>和<u>测量数据</u>窗口）。</li>
+<li>草图绘制，绘图窗口是测量活动的子活动。</li>
+<li>3D查看器。</li>
+<li>设备功能，设备窗口。</li>
+<li>DistoX校准（<u>校准信息</u>和<u>校准数据</u>窗口）是设备活动的子活动。</li>
+<li>洞穴项目。</li>
 </ul><br>
 
 <img src="windows.png"><br><p>
 
-TopoDroid windows have a scrollable button bar at the top, for the most frequent actions, and a menu button at the top-right.
-Dialogs usually have a confirmation button (<i>OK</i> or <i>Save</i>).
-If there are both, <i>OK</i> saves the input data and closes the dialog, while <i>Save</i> saves the input data and keep the dialog open for a new input.<br>
-Dialogs can have also a <i>back</i> (or <i>cancel</i>) button. If not present, the Android <i>BACK</i> button saves the changes and closes the dialog.
-Otherwise it just closes the dialog.<br><p>
+TopoDroid窗口顶部有一个可滚动的按钮栏，用于最常见的操作，右上角有一个菜单按钮。
+对话框通常有一个确认按钮（<i>确定</i>或<i>保存</i>）。
+如果两者都有，<i>确定</i>将保存输入的数据并关闭对话框，而<i>保存</i>将保存输入的数据并保持对话框打开以供新的输入。<br>
+对话框还可以有一个<i>返回</i>（或<i>取消</i>）按钮。如果没有<i>返回</i>按钮，则Android的<i>返回</i>按钮将保存更改并关闭对话框。否则，它只会关闭对话框。<br><p>
 
 
-<h4>Help and user manual</h4>
-TopoDroid windows have a menu button (three vertical dots) at the top-right. The last menu opens a quick help about the actions of the window buttons and menus.
-The quick-help dialog has a "book" button at the top-right which opens the user manual at the relevant page.
-A long tap on the icon opens the manual at the first page.<br>
-If your Android has a <i>Menu</i> key, you can use also that to open the man page.<br>
+<h4>帮助和用户手册</h4>
+TopoDroid窗口右上角有一个菜单按钮（三个竖点）。最后一个菜单打开有关窗口按钮和菜单操作的快速帮助。
+快速帮助对话框右上角有一个“书”按钮，打开相关页面的用户手册。
+长按图标将在用户手册中打开第一页。<br>
+如果您的Android设备有一个<i>菜单</i>键，您也可以使用它打开帮助页面。<br>
 <br><p>
 
-For the dialogs the hardware <i>Volume Up</i> key opens the <i>User Manual</i> at the relevant page.
-If your Android has a <i>Menu</i> key, you can use that as well.<br>
-For the dialogs with the row of the action buttons of a slightly darker color, the man page can be opened by a long tap
-on that row.<br><p>
+对于对话框，硬件<i>音量增加</i>键将在用户手册中打开相关页面。
+如果您的Android设备有一个<i>菜单</i>键，您也可以使用它。<br>
+对于带有动作按钮行的对话框，长按该行将打开手册页面。<br><p>
 
 
-<h4>Settings</h4>
-TopoDroid has a large number of settings.
-These are divided in categories and subcategories:
+<h4>设置</h4>
+TopoDroid有大量的设置。
+这些设置被分成类别和子类别：
 <ul>
-<li>General</li>
-<li>Import/Export</li>
-<li>Survey data</li>
-<li>Sketching</li>
-<li>Devices and calibration</li>
-<li>3D viewer</li>
+<li>一般</li>
+<li>导入/导出</li>
+<li>测量数据</li>
+<li>草图绘制</li>
+<li>设备和校准</li>
+<li>3D查看器</li>
 <!-- li>Cave projects</li -->
 </ul><p>
 
-The settings displayed in the <u>Preferences window</u> depend on the activity level.<br><p>
+在<u>首选项窗口</u>中显示的设置取决于活动级别。<br><p>
 
-Numerical settings can have minimum and maximum values. 
-If the entered value is outside the bounds, the value of the bound is assigned to the setting.<br><p>
+数值设置可以具有最小值和最大值。
+如果输入的值超出范围，则将为该设置分配边界值。<br><p>
 
-The app settings can be exported to "settings.txt", in plain text format. 
-The file is stored in the app private Files folder.
-The settings can be later reset importing the values from this file.<br><p>
+应用程序设置可以导出为“settings.txt”，以纯文本格式保存。
+文件存储在应用程序的私有Files文件夹中。
+稍后可以通过导入此文件中的值来重置设置。<br><p>
 
 
 <div style="font-size: 90%">
-More esoteric settings (<a href="page_geek.htm">Geek</a>) are marked with [G].
-They are collected under the <i>Custom settings</i> section.
+更多的奇特设置（<a href="page_geek.htm">Geek</a>）用[G]标记。
+它们收集在<i>Custom settings</i>部分下。
 </div>
 <br><p>
 
 
-<h4>Text and Buttons size</h4>
-The "Text Size" setting specifies the dimension of the list text entries, in particular the list of surveys, that of shots, and that of calibration data.<br>
-There are five choices for the size of buttons: "small", "normal", "medium", "large", and "huge". The "normal" size is suitable for cell phones (5" screen), and is the default. The "large" size is for tablets (7" screen).<br><p>
+<h4>文本和按钮大小</h4>
+“文本大小”设置指定列表文本条目的尺寸，特别是测量、射线和校准数据列表的尺寸。<br>
+按钮有五种尺寸选择：“小”、“正常”、“中等”、“大”和“巨大”。“正常”大小适合5英寸的手机屏幕，并且是默认值。“大”尺寸适用于7英寸的平板电脑。<br><p>
 
-<h4>Drawing tools (palette)</h4>
-TopoDroid comes with a considerable number of drawing tools bundled in.
-By default only the most basic tools are enabled. 
-You can enable more tools as the need arises, with the <i>palette</i> button on the <u>Main window</u>.
-By this means you can get used to the TopoDroid "iconography" a bit at a time.
+<h4>绘图工具（调色板）</h4>
+TopoDroid自带了大量捆绑在一起的绘图工具。
+默认情况下，只启用了最基本的工具。
+您可以随着需要逐步启用更多工具，使用<u>主窗口</u>上的<i>调色板</i>按钮。
+通过这种方式，您可以逐渐熟悉TopoDroid的“图标学”。
 <br><p>
 
-Additional drawing tool sets can be installed in the palette [G].
-Custom tools can be also created and added to the palette, and tools with no use can be removed.<br><p>
+可以在调色板中安装附加的绘图工具集[G]。
+还可以创建并添加自定义工具到调色板，以及移除没有用处的工具。<br><p>
 
 
-<a href="page_subdirs.htm">TopoDroid subdirectories</a><br>
-<a href="page_database.htm">TopoDroid databases</a><br>
-<a href="page_aux.htm">Auxiliary apps</a><br>
+<a href="page_subdirs.htm">TopoDroid子目录</a><br>
+<a href="page_database.htm">TopoDroid数据库</a><br>
+<a href="page_aux.htm">辅助应用程序</a><br>
 
 <p>
 
-<a href="manual00.htm">&lt; Preface</a> |
-<a href="manual02.htm">Main window &gt;</a>
+<a href="manual00.htm">&lt; 前言</a> |
+<a href="manual02.htm">主窗口 &gt;</a>
 
 </body></html>

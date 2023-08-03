@@ -1,111 +1,111 @@
 <html><body>
-<h3>[3] DEVICE WINDOW</h3>
+<h3>[3] 设备窗口</h3>
 
-Before surveying you need to connect and pair Android with your device and calibrate it.
+在测量之前，您需要连接并配对Android设备和测距仪，并对其进行校准。
 
-Tap the <i>Device</i> button in the <u>Main window</u> to open the <i>Device Window</i>.
-The list of known devices is shown at the bottom. 
-The supported devices are: DistoX, DistoX2, DistoXBLE, Sap5, and Bric4.<br>
+在<u>主窗口</u>中点击<i>设备</i>按钮，打开<i>设备窗口</i>。
+已知设备列表显示在底部。
+支持的设备有：DistoX、DistoX2、DistoXBLE、Sap5和Bric4。<br>
 <img src="btn_devices.png" height="36" border="1"><br><p>
 
-TopoDroid works with one device at a time.
-To select it tap on its entry in the list. The name of the selected device is shown at the top, just below the buttons.
-If no device is selected, there is a red message saying "Device not selected".<br><p>
+TopoDroid一次只能使用一个设备。
+要选择设备，请在列表中点击其条目。所选设备的名称显示在按钮下方的顶部。
+如果未选择设备，将显示红色消息"未选择设备"。<br><p>
 
-If the device list is empty, your device needs to be connected and paired with the Android.
-This can be done with the <i>Settings</i> app.<br>
-If it does not pair automatically the DistoX PIN is "0000", four zeros.<br>
-If it does not pair automatically the Sap5 PIN is "000000", six zeros.<br><p>
+如果设备列表为空，则需要连接并配对您的设备与Android设备。
+这可以通过<i>设置</i>应用程序完成。
+如果没有自动配对，DistoX的PIN码是"0000"，六个零。<br>
+如果没有自动配对，Sap5的PIN码是"000000"，六个零。<br><p>
 
-<b>Device nickname</b><br>
-By default TopoDroid uses the bluetooth MAC address as name for a device.
-The devices can be given nicknames to distinguish among several devices more easily.<br><p>
+<b>设备昵称</b><br>
+默认情况下，TopoDroid使用蓝牙MAC地址作为设备名称。
+可以给设备取昵称以更容易区分多个设备。<br><p>
 
-<i>Note. Buttons and menus marked with [*] are specific for the DistoX and need the device to be on.</i><br><p>
+<i>注意。带有[*]标记的按钮和菜单专门针对DistoX，并需要设备处于开启状态。</i><br><p>
 
-<h4>ACTIONS</h4>
+<h4>动作</h4>
 <ul style="margin-top=0">
-<li>tap on a device entry makes it the active device</li>
-<li>long tap on a device entry sets the <a href="page_device_name.htm">nickname</a> or set the "second" DistoX</li>
+<li>点击设备条目，使其成为活动设备</li>
+<li>长按设备条目，设置<a href="page_device_name.htm">昵称</a>或设置"第二个"DistoX</li>
 </ul><br><p>
 
-<h4>BUTTONS</h4>
+<h4>按钮</h4>
 <ul style="margin-top=0">
-<li><img src="btn_bluetooth.png" width="36" border="1"> reset bluetooth connection.</li>
-<li><img src="btn_info.png" width="36" border="1"> device information [N,*]</li>
-<li><img src="btn_memory.png" width="36" border="1"> <a href="page_memory.htm">DistoX</a> or <a href="page_bric_memory.htm">Bric4</a> memory functions [*]</li>
-<li><img src="btn_toggle.png" width="36" border="1"> toggle the DistoX calibration mode on and off [*]</li>
-<li><img src="btn_compute.png" width="36" border="1"> DistoX <a href="page_calib_dialog.htm">calibrations</a></li>
-<li><img src="btn_read.png" width="36" border="1"> read and display the calibration coefficients from the DistoX [A,*]</li>
+<li><img src="btn_bluetooth.png" width="36" border="1">重置蓝牙连接。</li>
+<li><img src="btn_info.png" width="36" border="1">设备信息[需要通信,*]</li>
+<li><img src="btn_memory.png" width="36" border="1"><a href="page_memory.htm">DistoX</a>或<a href="page_bric_memory.htm">Bric4</a>存储器功能[*]</li>
+<li><img src="btn_toggle.png" width="36" border="1">切换DistoX校准模式（开启/关闭）[*]</li>
+<li><img src="btn_compute.png" width="36" border="1">DistoX <a href="page_calib_dialog.htm">校准</a></li>
+<li><img src="btn_read.png" width="36" border="1">从DistoX读取并显示校准系数[A,*]</li>
 </ul><br><p>
 
-[*] These action need communication with the device.<br><p>
+[*] 这些操作需要与设备进行通信。<br><p>
 
-For the DistoX all the buttons are active.<br>
-For the Bric4, the first three buttons are active.<br>
-For the Sap5 only the first button is active.<br><p> 
+对于DistoX，所有按钮都是活动的。<br>
+对于Bric4，前三个按钮是活动的。<br>
+对于Sap5，只有第一个按钮是活动的。<br><p>
 
-If toggling the DistoX calibration mode fails at the first try, repeat it a second time.<br><p>
+如果第一次尝试切换DistoX校准模式失败，请重试第二次。<br><p>
 
-Reading the device info fails if TopoDroid is connected and downloading data. 
-This can happen when te <u>Device window</u> is opened from the <u>Survey Data window</u>.
+如果TopoDroid已连接并正在下载数据，则无法读取设备信息。
+这可能发生在从<u>测量数据窗口</u>或<u>绘图窗口</u>打开<u>设备窗口</u>时。
 <br><p>
 
-<h4>MENUS</h4>
+<h4>菜单</h4>
 <ul style="margin-top=0">
-<!-- li><u>Scan</u> for new DistoX devices [N,*]. You might have to try two or three times before the DistoX is found</li -->
-<!-- li><u>BLE Scan</u> for new BLE devices [N,*].</li -->
-<!-- li><u>Pair</u> the active DistoX with the Android, if not already paired [N,*]</li -->
-<li><u>Disconnect</u> clears the active device [A]</li>
-<li>Dump and upload <a href="page_firmware.htm">firmwares</a> to the DistoX (v. 2 and BLE) [E,*]</li>
-<li>Display log of DistoX packets [T]</li>
-<li><u>Settings</u></li>
-<li><u>Help</u></li>
+<!-- li><u>扫描</u>查找新的DistoX设备[需要通信,*]。您可能需要尝试两三次才能找到DistoX</li -->
+<!-- li><u>BLE扫描</u>查找新的BLE设备[需要通信,*]</li -->
+<!-- li><u>配对</u>将活动的DistoX与Android设备配对，如果尚未配对[需要通信,*]</li -->
+<li><u>断开</u>清除活动设备[A]</li>
+<li>转储并上传DistoX（v. 2和BLE）的<a href="page_firmware.htm">固件</a>[需要通信,E,*]</li>
+<li>显示DistoX数据包的日志[T]</li>
+<li><u>设置</u></li>
+<li><u>帮助</u></li>
 </ul><br>
 
-<h4>DEVICE SETTINGS</h4>
+<h4>设备设置</h4>
 <ul style="margin-top=0">
-<li><i>Bluetooth</i>: whether to enable, disable, or check on start-up [default "check"]</li>
-<li><i>Number of new data</i>: get the number of new data before downloading them (on-demand mode) [default "no"]</li>
+<li><i>蓝牙</i>：启用、禁用或在启动时检查[默认"check"]</li>
+<li><i>新数据数量</i>：在下载数据之前获取新数据的数量（按需模式）[默认"no"]</li>
 </ul><br><p>
 
-The following settings apply only to the DistoX (which uses classical bluetooth).
+以下设置仅适用于DistoX（使用经典蓝牙）。
 <ul style="margin-top=0">
-<li><i>Data connection mode</i>. "On-demand", "continuous", or "multi" [default "on-demand"]</li>
-<!-- li><i>Auto reconnect</i>: automatically reconnect if the connection is lost in "continuous" data download-mode [default "no"]</li -->
-<li>DistoX <i>Socket</i> type. Normal or "insecure" [default "insecure"]</li>
-<li>DistoX <i>Z6-workaround</i>: a download timeout error on Z6 phone, and possibly other devices. It is safe to leave this enabled [default "on"]</li>
-<!-- li><i>Auto pairing</i>: whether TopoDroid should try to pair with the DistoX selected from a scan [default "no"]</li -->
+<li><i>数据连接模式</i>。"按需"、"连续"或"多" [默认"按需"]</li>
+<!-- li><i>自动重连</i>：在"连续"数据下载模式中，如果连接丢失是否自动重新连接[默认"no"]</li -->
+<li>DistoX<i>套接字</i>类型。正常或"不安全"[默认"不安全"]</li>
+<li>DistoX<i>Z6-workaround</i>：修复Z6手机和可能其他设备上的下载超时错误。可以安全地保留此项[默认"on"]</li>
+<!-- li><i>自动配对</i>：TopoDroid是否应尝试与从扫描中选择的DistoX进行配对[默认"no"]</li -->
 </ul><br><p>
 
-<b>Data connection mode</b><br>
-There are three connections modes for the DistoX.
+<b>数据连接模式</b><br>
+DistoX有三种连接模式。
 <ul>
-<li>in <i>on-demand</i> mode data are downloaded in burst, and when there is no more data to download the connection is closed.</li>
-<li>in <i>continuous</i> mode TopoDroid remains connected to the DistoX and the shots are downloaded as soon as they are taken.
-If the DistoX and Android disconnect, TopoDroid repeatedly tries to reconnect.
-Otherwise, the bluetooth connection is closed.</li>
-<li>the <i>multi</i> mode is like the "on-demand" mode, but a long-tap on the "download" button, in the <u>Survey Data window</u> or in the <u>Drawing window</u>,
-changes the DistoX. It you have set a "second" DistoX (in the <u>Device window</u>) it is swapped with the current DistoX.
-Otherwise, you get a dialog to pick one among the paired DistoXes.</li>
+<li>在<i>按需</i>模式下，数据以一次性方式下载，当没有更多数据可下载时，连接将关闭。</li>
+<li>在<i>连续</i>模式下，TopoDroid保持与DistoX的连接，测距数据一旦被测量就会被下载。
+如果DistoX和Android断开连接，TopoDroid会反复尝试重新连接。
+否则，蓝牙连接将关闭。</li>
+<li>在<i>多</i>模式下，与"按需"模式类似，但在<u>测量数据窗口</u>或<u>绘图窗口</u>中长按"下载"按钮，
+可以更换DistoX。如果您已经设置了"第二个"DistoX（在<u>设备窗口</u>中），它将与当前的DistoX交换。
+否则，您将得到一个对话框，从中选择一个配对的DistoX。</li>
 </ul>
 <br>
-With the "multi" mode, the current DistoX is shown in the title of the <u>Survey Data</u> and <u>Drawing windows</u>.<br>
-The connection mode applies only to the data download. Other DistoX functions use a one-shot query mode.
+使用"多"模式时，当前的DistoX将显示在<u>测量数据</u>和<u>绘图窗口</u>的标题中。<br>
+连接模式仅适用于数据下载。其他DistoX功能使用一次性查询模式。
 <br><p>
 
-Sap5 and Bric4 are always connected in <i>continuous</i> mode.<br><p>
+Sap5和Bric4始终以<i>连续</i>模式连接。<br><p>
 
-<a href="page_geek.htm">Custom settings</a>: <i>Connection delay</i>, <i>Two-DistoX survey</i>, <i>Data pause</i>, <i>Data ready wait delay</i>, <i>Laser pause</i>, <i>Shot pause</i>.<br><p>
+<a href="page_geek.htm">自定义设置</a>: <i>连接延迟</i>、<i>两个DistoX测量</i>、<i>数据暂停</i>、<i>数据准备等待延迟</i>、<i>激光暂停</i>、<i>测量暂停</i>。<br><p>
 
-<a href="page_device_select.htm">Devices</a><br>
-<a href="page_trouble.htm">DistoX troubleshooting</a><br>
-<a href="page_distox.htm">DistoX functions</a><br>
-<a href="page_bric.htm">Bric4 functions</a><br>
-<a href="page_sap.htm">Sap5 functions</a><br>
+<a href="page_device_select.htm">设备</a><br>
+<a href="page_trouble.htm">DistoX故障排除</a><br>
+<a href="page_distox.htm">DistoX功能</a><br>
+<a href="page_bric.htm">Bric4功能</a><br>
+<a href="page_sap.htm">Sap5功能</a><br>
 <p>
 
-<a href="manual02.htm">&lt; Main window</a> |
-<a href="manual04.htm">Calibration Info window &gt;</a>
+<a href="manual02.htm">&lt; 主窗口</a> |
+<a href="manual04.htm">校准信息窗口 &gt;</a>
 
 </body></html>

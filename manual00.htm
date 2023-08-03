@@ -1,81 +1,71 @@
 <html><body>
-<h2>TopoDroid USER MANUAL</h2>
-<!-- NOW -->
+<h2>TopoDroid 用户手册</h2>
+<!-- 现在 -->
 <i>marco.corvi@gmail.com</i><br><p>
 
 <img src="icon4.png"><br>
-TopoDroid is an Android app for cave surveying. TopoDroid takes the raw data, helps you to organize them, and produces the line map of the survey on the spot. You can further draw sketches around the line map while you are surveying, thereby reducing the probability of error entering in your sketch, and helping you to detect errors in the data while you are still in the cave. TopoDroid has many functions to help you get the most out of your work in the cave. In this way a working map is almost ready as you are ending the survey trip.
+TopoDroid是一款用于洞穴测量的Android应用程序。TopoDroid将原始数据导入并帮助您组织它们，在现场生成测量线路图。您还可以在测量过程中绘制草图，从而减少绘图中可能出现的错误，并在洞穴内时检测数据错误。TopoDroid拥有许多功能，帮助您在洞穴内高效工作。因此，在测量结束时，几乎可以立即获得一张可用的地图。
 <br><p>
 
-TopoDroid makes the time you spend surveying in the cave more effective.
-The purpose of TopoDroid is to help a surveyor to collect the data with more accuracy as well as to make the surveying
-task more pleasant, not to produce the final map of the cave. For that purpose good PC programs already exist.<br><p>
+TopoDroid使您在洞穴测量时更加高效。TopoDroid的目的是帮助测量员更准确地收集数据，并使测量任务更加愉快，而不是生成洞穴的最终地图。因此，已经有一些优秀的PC程序可以实现这一目的。<br><p>
 
-TopoDroid has five different "activity levels". The lowest levels already have
-enough functionalities to download data, manage station names, and draw simple sketches.
-The higher levels can be used to prepare data and sketches for an easier work on the PC.<br><p>
+TopoDroid有五个不同的“活动级别”。较低的级别已经具备足够的功能，可以下载数据，管理站点名称，并绘制简单的草图。较高级别则可用于准备数据和草图，以便在PC上更轻松地进行后续处理。<br><p>
 
-TopoDroid is designed to handle a survey at a time, not to manage complex cave survey projects that include several different surveys.
-Nevertheless it includes a <i>Cave Project Manager</i>, that can be used to compose surveys into a cave/karst project,
-and a <i>3D Viewer</i>, with which you can see the 3D of surveys and cave projects.<br><p>
+TopoDroid设计用于一次处理一个测量项目，而不是管理包含多个不同测量的复杂洞穴测量项目。尽管如此，它包含一个“洞穴项目管理器”，可用于将测量组合成一个洞穴/喀斯特项目，以及一个“3D查看器”，可用于查看测量和洞穴项目的3D效果。<br><p>
 
-TopoDroid works with DistoX (v. 1, 2 and BLE), Sap5, and Bric4. However, survey data can be manually entered.<br>
-Beware that Android devices (and active stylus) can influence the measurements taken with an electronic device, if they are too close.<br><p>
+TopoDroid支持DistoX（v. 1、2和BLE）、Sap5和Bric4。然而，测量数据也可以手动输入。<br>
+请注意，如果Android设备（以及主动触控笔）离电子设备太近，它们可能会影响电子设备的测量。<br><p>
 
 <i>
-The Android robot is reproduced or modified from work created and shared by Google and used according to terms
-described in the Creative Commons 3.0 Attribution Licence.
+Android机器人的图像是基于由Google创建和共享的作品，并根据Creative Commons 3.0署名许可条款使用。
 </i><br><p>
 
-<b><a href="page_quick.htm">TopoDroid quick guide</a></b><br><p>
+<b><a href="page_quick.htm">TopoDroid 快速指南</a></b><br><p>
 
 <img src="map_sample.png" alt="ICON" /><br><p>
 
-<b>DISCLAIMER</b><br>
-<i>TopoDroid is an open-source free app and it is ad-free. It comes with no warranty: by using it you agree that the authors are not responsible for any loss of data you might incur or damage whatsoever, in particular to the DistoX, Sap5, Bric4. While the authors do their best to provide a bug-free app, this is not guaranteed.</i>
+<b>免责声明</b><br>
+<i>TopoDroid是一款开源免费应用程序，不含广告。使用本应用程序时，作者对您可能遭受的任何数据损失或任何损害不负责任，特别是对DistoX、Sap5和Bric4设备。尽管作者已尽最大努力提供无故障的应用程序，但不能保证完全无故障。</i>
 <hr><br><p>
 
-<h4>TopoDroid private folder</h4>
-The TopoDroid private folder, "Android/data/com.topodroid.TDX/files",
-contains the folders of the drawing tools, "point", "line", and "area", and the 
-device database "device10.sqlite" with the calibration data,
-the exported calibration files (folder "ccsv"), the DistoX2 and DistoXBLE firmware files (folder "bin"),
-and the DistoX memory dumps (folder "dump").
+<h4>TopoDroid 私人文件夹</h4>
+TopoDroid的私人文件夹位于 "Android/data/com.topodroid.TDX/files"，
+其中包含绘图工具的文件夹 "point"、"line" 和 "area"，以及设备数据库 "device10.sqlite"，其中包含校准数据，
+导出的校准文件（文件夹 "ccsv"），DistoX2和DistoXBLE固件文件（文件夹 "bin"），
+以及DistoX的内存转储（文件夹 "dump"）。
 <br><p>
 
-This folder, and its content, is deleted when the app is uninstalled, unless you check the box to keep
-the app data. 
+此文件夹及其内容在卸载应用程序时将被删除，除非您选择保留应用程序数据的选项。
 <br><p>
 
-<h4>TopoDroid survey folders</h4>
-The TopoDroid base directory is "Documents/TDX", in the <i>primary external storage</i>.
-It contains the project folder "TopoDroid". The project folder contains the
-database "distox14.sqlite", the "zip" folder, a folder "tmp" for temporary files ,
-and is populated with a folder for each survey that is created.
+<h4>TopoDroid 测量文件夹</h4>
+TopoDroid的基础目录是 "Documents/TDX"，位于<主要外部存储>中。
+它包含项目文件夹 "TopoDroid"。项目文件夹包含数据库 "distox14.sqlite"，"zip" 文件夹，用于临时文件的文件夹 "tmp"，
+并且针对每个创建的测量，该文件夹都有一个相应的子文件夹。
 <br><p>
 
-This folder and its subfolders are not deleted when the app is uninstalled.
+在卸载应用程序时，此文件夹及其子文件夹不会被删除。
 <br><p>
 
 <img src="folders.png" alt="FOLDERS" /><br><p>
 
-<h4>Survey data</h4>
-Survey data and sketches are saved in the "TopoDroid" subfolder of TDX.<br>
-Each survey has a subfolder under "TopoDroid".<br>
-The "TopoDroid" folder contains the database, "distox14.sqlite", the survey folders,
-and the folder of the cave projects, "thconfig",<br><p>
+<h4>测量数据</h4>
+测量数据和草图保存在 TDX 的 "TopoDroid" 子文件夹中。<br>
+每个测量在 "TopoDroid" 下有一个子文件夹。<br>
+"TopoDroid" 文件夹包含数据库 "distox14.sqlite"，测量文件夹，
+以及洞穴项目文件夹 "thconfig"。<br><p>
 
-<h4>Granting access permissions</h4>
-On Android-11 and later, TopoDroid may fail to create the base folder "TDX", or some subfolders or files in it,
-because it does not have enough permission to access the <i>primary external storage</i>.<br>
-In this case you cen grant permissions using "adb" (Android Debug Bridge).<br>
+<h4>授予权限</h4>
+在Android-11及更高版本中，TopoDroid可能无法创建基础文件夹 "TDX"，或其中的一些子文件夹或文件，
+因为它没有足够的权限来访问<主要外部存储>。<br>
+在这种情况下，您可以使用 "adb"（Android调试桥）授予权限。<br>
 <ol>
-<li>download "adb" on your PC</li>
-<li>on Android, enable "Developer options" (go to settings "About Phone", tap seven times the "Build number")</li>
-<li>enable "USB debugging" in the "Developer options"</li>
-<li>on the PC start the adb server. Enter the command "adb start-server"</li>
-<li>connect Android to the PC with a USB cable. You might have to allow adb-connection from the PC, on your Android</li>
-<li>on the PC enter the three commands:
+<li>在您的PC上下载 "adb"</li>
+<li>在Android设备上，启用 "开发者选项"（进入设置 "关于手机"，连续点击 "版本号" 七次）</li>
+<li>在 "开发者选项" 中启用 "USB调试"</li>
+<li>在PC上启动 adb 服务器。输入命令 "adb start-server"</li>
+<li>使用USB线将Android设备连接到PC。您可能需要在Android上允许来自PC的adb连接</li>
+<li>在PC上输入三个命令：
 <ul>
 <li>adb shell appops set com.topodroid.TDX READ_EXTERNAL_STORAGE allow</li>
 <li>adb shell appops set com.topodroid.TDX WRITE_EXTERNAL_STORAGE allow</li>
@@ -85,88 +75,81 @@ In this case you cen grant permissions using "adb" (Android Debug Bridge).<br>
 </ol>
 <br><p>
 
-<h4>Importing old surveys</h4>
-TopoDroidX (v.6) can be installed together with the old v. 5.1.40 because they use different base folders.<br>
-Old v.5.1.40 surveys can be imported in v.6 from their zip archives created with the old TopoDroid.<br>
-They can also be created with the zip script found at
+<h4>导入旧测量数据</h4>
+TopoDroidX（v.6）可以与旧版本v.5.1.40同时安装，因为它们使用不同的基础文件夹。<br>
+可以从旧TopoDroid创建的zip存档中导入旧v.5.1.40测量数据到v.6。<br>
+还可以使用位于以下网址的zip脚本创建这些zip存档：<br>
 <!-- a href="http://marcocorvi.altervista.org/caving/speleoapps/speleoapks/TopoDroidZipScript.html" -->
 http://marcocorvi.altervista.org/caving/speleoapps/speleoapks/TopoDroidZipScript.html
 <!-- /a -->
 <br><p>
 
-<b>N.B.</b> TopoDroid v.5.1.40 cannot import v.6 zip archives, because of changes in the database.<br><p>
+<b>N.B.</b> 由于数据库更改，TopoDroid v.5.1.40无法导入v.6的zip存档。<br><p>
 
-<h4>Hardware features</h4>
-TopoDroid uses the following hardware features: "bluetooth", "camera", "microphone", "GNSS", "multitouch".
-Functions of TopoDroid that require a feature not present in your Android device, are automatically turned off.
-<br>
-Internet connection is used only to install translations of the user manual, and to check if a new version is available.<br>
-<a href="page_perms.htm">Android permissions</a>
+<h4>硬件特性</h4>
+TopoDroid使用以下硬件特性："蓝牙"、"相机"、"麦克风"、"GNSS"和"多点触控"。
+如果TopoDroid需要您的Android设备没有的某个特性，相关功能将自动关闭。<br>
+Internet连接仅用于安装用户手册的翻译以及检查是否有新版本可用。<br>
+<a href="page_perms.htm">Android权限</a>
 <br><p>
 
-<h4>Native libraries</h4>
-TopoDroid contains a couple of libraries compiled native only for selected architectures (arm64_v8a, armeabi-v7a, and x86_64).
-These libraries are: <i>powercrust</i> and a <i>tiff</i> wrapper for <i>libtiff</i>.
-The latter contains <i>libjpeg</i> and <i>libpng</i> statically linked.<br><p>
+<h4>本地库</h4>
+TopoDroid包含为选定架构（arm64_v8a、armeabi-v7a和x86_64）编译的一些本地库。
+这些库包括：<i>powercrust</i> 和 <i>tiff</i>，其中的 <i>libtiff</i> 包含了 <i>libjpeg</i> 和 <i>libpng</i> 的静态链接。<br><p>
 
-
-<h4>Errors and crashes</h4>
-Due to limited resources, the app cannot be fully tested. Make a backup of the apk and the survey database before updating the app.<br><p>
+<h4>错误和崩溃</h4>
+由于资源有限，无法对应用程序进行全面测试。在更新应用程序之前，备份apk和测量数据库。<br><p>
 
 <ul style="margin-top=0">
-<li>Crashes after a selection choice can be due to incomplete translations.
-Run the app with English language; if the crash disappears contact the translation maintainer.</li> 
-<li>If you find an error or the app does not behave as you expect, send me an email.
-<b>Include the app version and Android version</b>.</li>
-<li>For general questions and feature requests, send an email to TopoDroid mailing list: <i>&lt;topodroid@googlegroups.com&gt;</i>.</li>
+<li>在进行选择后崩溃可能是由于翻译不完整所致。使用英语运行应用程序，如果崩溃消失，则请联系翻译维护者。</li> 
+<li>如果发现错误或应用程序行为与预期不符，请给我发送电子邮件。
+<b>请提供应用程序版本和Android版本</b>。</li>
+<li>有关一般问题和功能请求，请发送电子邮件至TopoDroid邮件列表：<i>&lt;topodroid@googlegroups.com&gt;</i>。</li>
 </ul><br><p>
 
 <hr>
-<h4>App translations:</h4>
+<h4>应用程序翻译：</h4>
 <ul>
-<li>H.J. Luo (Chinese)</li>
-<li>G. Chardin - D. Ros (French)</li>
-<li>B. Holl (Hungarian)</li>
-<li>F. Toso (Italian)</li>
-<li>R. Severo (Portuguese)</li>
-<li>A. Kozhenkov (Russian)</li>
-<!-- li>V. Georgiev (Bulgarian)</li -->
-<!-- li>M. Keller (German)</li -->
-<!-- li>K. Borgiel (Polish)</li -->
-<!-- li>A. Pologea (Romanian)</li -->
-<!-- li>M. Jurecka - J. Hetesi (Slovak)</li -->
-<!-- li>M. Guerrero - J. Pardo (Spanish)</li -->
-<!-- li>V. Kozly (Ukrainian)</li -->
+<li>S. Tian（中文）</li>
+<li>G. Chardin - D. Ros（法语）</li>
+<li>B. Holl（匈牙利语）</li>
+<li>F. Toso（意大利语）</li>
+<li>R. Severo（葡萄牙语）</li>
+<li>A. Kozhenkov（俄语）</li>
+<!-- li>V. Georgiev（保加利亚语）</li -->
+<!-- li>M. Keller（德语）</li -->
+<!-- li>K. Borgiel（波兰语）</li -->
+<!-- li>A. Pologea（罗马尼亚语）</li -->
+<!-- li>M. Jurecka - J. Hetesi（斯洛伐克语）</li -->
+<!-- li>M. Guerrero - J. Pardo（西班牙语）</li -->
+<!-- li>V. Kozly（乌克兰语）</li -->
 </ul>
 <br><p>
 
-Website: https://sites.google.com/site/speleoapps/<br>
-Sources: https://github.com/marcocorvi/topodroid<br><p>
+网站：https://sites.google.com/site/speleoapps/<br>
+源码：https://github.com/marcocorvi/topodroid<br><p>
 
-<h4>User manual translations</h4>
+<h4>用户手册翻译</h4>
 <ul>
-<li>A. Kozhenkov - Russian: https://github.com/akozhenkov/TD_manual_RU</li>
-<li>F. Toso - Italian: https://github.com/fato63/TopoItMan</li>
-<li>D. Ros - French: http://souterweb.free.fr/</li>
-<li>B. Holl - Hungarian: https://github.com/BalazsHoll/TopoDroid_manual_hu</li>
-<li>R. Severo - Portuguese: https://github.com/rsevero/Topodroid_Manual_PT</li>
-<!-- li>M. Guerrero - Spanish: https://github.com/xguerrero/Topodroid_manual_es</li -->
+<li>A. Kozhenkov - 俄语: https://github.com/akozhenkov/TD_manual_RU</li>
+<li>F. Toso - 意大利语: https://github.com/fato63/TopoItMan</li>
+<li>D. Ros - 法语: http://souterweb.free.fr/</li>
+<li>B. Holl - 匈牙利语: https://github.com/BalazsHoll/TopoDroid_manual_hu</li>
+<li>R. Severo - 葡萄牙语: https://github.com/rsevero/Topodroid_Manual_PT</li>
+<!-- li>M. Guerrero - 西班牙语: https://github.com/xguerrero/Topodroid_manual_es</li -->
 </ul>
 <p>
 
-User manual translations can be quite old if they are not maintained.<br>
-They are installed by choosing the translation language in the appropriate setting of the <u>Main window</u>.
-(internet connection required).<br><p>
+如果这些用户手册翻译没有得到维护，它们可能会相当旧。您可以通过在<u>Main窗口</u>的适当设置中选择翻译语言来安装这些翻译（需要互联网连接）。<br><p>
 
-If you have installed a manual translation, and there is an update you are prompted to install the translation update
-when you update the app.
+如果您安装了用户手册的翻译，并且有更新可用，更新应用程序时会提示您安装翻译更新。
 <br><p>
 
-<h4>TopoDroid website</h4>
+<h4>TopoDroid 网站</h4>
 
 https://sites.google.com/site/speleoapps
 
 
-<a href="manual01.htm">Introduction &gt;</a>
+<a href="manual01.htm">简介 &gt;</a>
 
 </body></html>
