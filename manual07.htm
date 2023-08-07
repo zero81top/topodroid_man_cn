@@ -1,74 +1,73 @@
-<html><body>
-<h3>[7] SHOT LIST</h3>
+<h3>[7] 测点列表</h3>
 
-The shots are shown in a list. The list has no header to save space.  The shot information are
+测点以列表形式显示。为了节省空间，列表没有标题。测点信息包括：
 <ul style="margin-top=0">
-<li>Index (optional: it is shown only if the related choice in the <i>display mode</i> dialog is checked)</li>
-<li>From station</li>
-<li>To station</li>
-<li>Distance</li>
-<li>Azimuth</li>
-<li>Inclination</li>
-<li>Extend direction: either left (&lt;), right (&gt;), vertical (|), or ignore (a blank space). The "extend" of splays is present only if explicitly set by the user in one of the shot edit dialogs.</li>
+<li>索引（可选：仅当<i>显示模式</i>对话框中相关选项被选中时显示）</li>
+<li>起始站</li>
+<li>终止站</li>
+<li>距离</li>
+<li>方位角</li>
+<li>倾角</li>
+<li>延展方向：左（&lt;）、右（&gt;）、垂直（|）或忽略（空格）。侧线的“延展”仅在用户在测点编辑对话框中显式设置时才存在。</li>
 </ul>
-There can be additional characters for the flag, and the presence of a photo (#). Finally the beginning of the comment if any.
-The flag can be: duplicate shot (&#x00b2;), surface shot (&#x00f7;), only-profile (&#x00a7;), only-plan (_).<br><p>
+此外，还可能有标记、照片标识（#）以及注释的开始部分。
+标记可以是：重复测点（&#x00b2;）、地表测点（&#x00f7;）、只有剖面图（&#x00a7;）、只有平面图（_）。<br><p>
 
-Blank shots, and repeated-legs can be hidden. Splay shots can also be hidden to unclutter the list of shots. However, even if splays are not shown, you can see those at a station by tapping on the station name in a leg shot. To hide them tap again on the station name (even a tap on the name in a splay will do).<br><p>
+空白测点和重复的测点段可以被隐藏。侧线测点也可以被隐藏，以清理测点列表。但是，即使隐藏了侧线测点，您仍然可以通过点击测点段中的站名来查看站内的侧线测点。再次点击站名即可隐藏侧线测点（即使点击侧线测点中的站名也一样）。<br><p>
 
-TopoDroid can set the station names automatically according to the <a href="page_station_policy.htm">station assignment policy</a>.<br><p>
+TopoDroid可以根据<a href="page_station_policy.htm">站点分配策略</a>自动设置站名。<br><p>
 
-<b>Shot item taps</b>
+<b>测点项点击</b>
 <ul style="margin-top=0">
-<li>a tap on a station name puts it in <i>editing-mode</i>, and the station is underlined.
-If inline station editing is enabled the station name can be edited.
-The station name edit must be finished with the ENTER key to take effect.</li>
-<li>when the station is underlined, a couple of tap toggles the display of splays at that station (only if splays are globally hidden).</li>
-<li>a tap on the shot data opens the <a href="page_shot_edit1.htm">shot edit</a> dialog, in which you can set the stations as well as other attributes of the shot.</li>
-<li>a long tap on a station name makes it the <a href="page_current.htm">active</a> station (it is highlighted green)</li>
-<li>a long tap on a shot starts the multi-shot selection</li>
+<li>点击站名将其放入<i>编辑模式</i>，并将站名下划线显示。
+如果启用了内联站名编辑，则可以编辑站名。
+站名编辑必须使用回车键完成以生效。</li>
+<li>在站名下划线时，点击两次切换在该站点显示侧线测点（仅当全局隐藏侧线测点时有效）。</li>
+<li>点击测点数据将打开<a href="page_shot_edit1.htm">测点编辑</a>对话框，您可以在其中设置站点以及测点的其他属性。</li>
+<li>长按站名将其设为<a href="page_current.htm">活动</a>站点（会用绿色突出显示）。</li>
+<li>长按测点段开始多测点选择。</li>
 </ul>
 <br><p>
 
-If you use TopoDroid automatic <a href="page_station_policy.htm">station naming</a>, you are likely to need the shot dialog only to enter the comment, and to change the "extend" direction. These two actions can be done also from the <u>Drawing window</u>, by selecting the shot in "edit" mode [A] and picking the <i>Note</i> button. The extend can be changed also graphically on the sketch. These actions are described in the section on the <u>Drawing window</u>.<br><p>
+如果您使用TopoDroid的自动<a href="page_station_policy.htm">站点命名</a>，您可能只需要用测点对话框输入注释和更改"延展"方向。这两个操作也可以在<u>Drawing window</u>中完成，通过在"编辑"模式[A]下选择测点段并选择<i>Note</i>按钮。延展方向也可以在示意图上进行图形化更改。这些操作在<u>Drawing window</u>部分有描述。<br><p>
 
-<b>Multi-shot selection</b><br>
-The selected shots have a gray background (possibly
-only in the back of the stations). Tapping a shot adds/removes it from the selection.
-If a shot is not selected, a long-tap on the shot adds it and all the previous unselected shots to the selection.
-The button bar changes to buttons for the multi-shot actions:
+<b>多测点选择</b><br>
+选中的测点将具有灰色背景（可能仅在站点背后）。
+点击测点可添加/移除其选中状态。
+如果未选中测点，则长按测点会将其及之前的未选中测点全部添加到选中状态。
+按钮栏会变为多测点动作的按钮：
 <ul>
-<li><img src="btn_left.png"     width="36" border="1"> set the shots extend to <i>left</i></li>
-<li><img src="btn_multishot_flip_extend.png"     width="36" border="1"> flip the shots extend</li>
-<li><img src="btn_right.png"  width="36" border="1"> set the shots extend to <i>right</i></li>
-<li><img src="btn_multishot_special_actions.png" width="36" border="1"> special actions dialog [T]</li>
-<li><img src="btn_delete.png" width="36" border="1"> delete the shots and put them in the shot-buffer. Warning: hidden secondary-leg shots are deleted when the corresponding leg shot is deleted</li>
-<li><img src="btn_copy.png"   width="36" border="1"> copy the shots to the shot-buffer</li>
-<li><img src="btn_clear.png"  width="36" border="1"> close the multi-shot selection</li>
+<li><img src="btn_left.png"     width="36" border="1"> 将测点延展设置为<i>左</i></li>
+<li><img src="btn_multishot_flip_extend.png"     width="36" border="1"> 翻转测点延展</li>
+<li><img src="btn_right.png"  width="36" border="1"> 将测点延展设置为<i>右</i></li>
+<li><img src="btn_multishot_special_actions.png" width="36" border="1"> 特殊操作对话框[T]</li>
+<li><img src="btn_delete.png" width="36" border="1"> 删除测点并将其放入测点缓冲区。警告：当删除相应的主测点段时，隐藏的侧线测点段也会被删除。</li>
+<li><img src="btn_copy.png"   width="36" border="1"> 将测点复制到测点缓冲区</li>
+<li><img src="btn_clear.png"  width="36" border="1"> 关闭多测点选择</li>
 </ul>
 <br><p>
 
-The special actions dialog includes [T]:
+特殊操作对话框包括[T]：
 <ul>
-<li>renumber the selected shots</li>
-<li>swap the stations of each shot</li>
-<li>set the sketch color of the selected splay shots</li>
-<li>mark the splays as X-splay or H/V-splay (or make them normal)</li>
-<li>compute the strike and dip of the plane containing the shots (only if the <u>Plane interpolation</u> option is enabled)</li>
+<li>重新为选定的测点编号</li>
+<li>交换每个测点的站点</li>
+<li>设置选定侧线测点段的示意图颜色</li>
+<li>将侧线测点段标记为X-侧线或H/V-侧线（或使其恢复为普通侧线）</li>
+<li>计算包含测点段的平面的走向和倾角（仅在启用了<u>Plane interpolation</u>选项时可用）</li>
 </ul>
 
-The stations of the first shot are used to seed the renumbering. They can be changed in the dialog.
-If both stations are entered the first selected shot is a leg and the following selected shots are renumbered consistently.
-If only the FROM station is entered (and the TO station is left empty), all the shots are renumbered as splay.
+重新编号将使用第一个选定测点段的站点作为起点。您可以在对话框中更改站点。
+如果输入了两个站点，则第一个选定的测点段是主测点段，接下来的选定测点段将一致重新编号。
+如果仅输入了起始站点（将终止站点留空），则所有选定的测点段将被重新编号为侧线。
 <br><p>
 
 <div style="font-size:90%">
-Setting the color of splays is enabled if only splays have been selected, otherwise it is disabled.<br>
-The computation of strike and dip of the bedding plane requires that all the selected shots have the same FROM station. Otherwise it is disabled.
-The result is shown in the dialog and added to (replaced if already present) the comment of the first selected shot.
+仅当选定了侧线测点段时，设置示意图颜色功能才会启用；否则将被禁用。<br>
+计算包含测点段的平面的走向和倾角要求所有选定的测点段具有相同的起始站点。否则将被禁用。
+计算结果将显示在对话框中，并添加到（如果已经存在，则替换）第一个选定测点段的注释中。
 </div><br><p>
 
-<a href="manual06.htm">&lt; Survey data</a> |
-<a href="manual08.htm">Survey info &gt;</a>
+<a href="manual06.htm">&lt; 测量数据</a> |
+<a href="manual08.htm">测量信息 &gt;</a>
 
 </body></html>
