@@ -1,35 +1,32 @@
 <html><body>
 
-<h4>DistoX CALIBRATION COEFFICIENTS</h4>
+<h4>DistoX校准系数</h4>
 
-This dialog displays the 24 coefficients of the calibration linear transformations for the <b>G</b> and the <b>M</b> vectors (12 coefficients each) and 3 coefficients of the non-linear terms (only DistoX2 v. 2.3 or higher).<br><p>
+此对话框显示了<b>G</b>和<b>M</b>向量的校准线性变换的24个系数（每个12个系数）以及非线性项的3个系数（仅适用于DistoX2版本2.3或更高版本）。<br><p>
 
-It is used in three different situations:
+它在三种不同情况下使用：
 <ul>
-<li>The <i>Read</i> button of the <u>Device window</u> display the coefficients read from the DistoX.</li>
-<li>The <i>Read</i> button of the <u>Calibration Info window</u> displays the coefficients stored in the database</li>
-<li>The <i>Compute</i> button of the <u>Calibration Data window</u> displays the computed coefficients</li>
+<li><u>设备窗口</u>的<i>读取</i>按钮显示从DistoX读取的系数。</li>
+<li><u>校准信息窗口</u>的<i>读取</i>按钮显示存储在数据库中的系数。</li>
+<li><u>校准数据窗口</u>的<i>计算</i>按钮显示计算得出的系数。</li>
 </ul>
 
-In the last case the dialog displays also an histogram of the residual errors of the calibration data,
-the average error (and the "delta" of the original algorithm), the standard deviation of the error distribution,
-the maximum error, and the number of iterations taken by the calibration computation.<br>
-Assuming that the azimuth-clino error distribution is normal, the standard deviation of the errors should be slightly over half the average value.<br><p>
+在最后一种情况下，对话框还显示了校准数据残差误差的直方图，平均误差（以及原始算法的"delta"），误差分布的标准偏差，最大误差以及校准计算所需的迭代次数。<br>
+假设方位角和倾角误差分布为正态分布，误差的标准偏差应略高于平均值的一半。<br><p>
 
-The error of a calibration data is the angle between the data direction and the average direction of the group the data belongs to, after having taken the calibration correction into account. The errors are reported in degrees.<br><p>
+校准数据的误差是校准修正后，数据方向与数据所属组的平均方向之间的角度。误差以度数表示。<br><p>
 
-The histogram has ticks on the horizontal axis at 0.5&deg; (yellow line), 1.0&deg; (red line), and 1.5&deg;.<br>
-On the vertical axis the tick marks are 10 and 20.<br><p>
+直方图的水平轴上有0.5°（黄线）、1.0°（红线）和1.5°的刻度。<br>
+垂直轴上的刻度标记为10和20。<br><p>
 
-The "delta" of the original algorithm is the square-root average of the residual differences between calibrated G-M vectors and the vectors that satisfy the minimization condition.
-It gives an estimate of the calibration accuracy (precision of the instrument):
-"delta" is roughly 5/4 of the accuracy in degrees.<br><p>
+原始算法的"delta"是校准后的G-M向量与满足最小化条件的向量之间的残差差值的平方根平均值。
+它提供了校准的准确性（仪器精度）估计：
+"delta"大致为精度的5/4（以度数表示）。<br><p>
 
-The dialog displays also the magnetic dip [degrees] computed by the calibration algorithm.<br><p>
+对话框还显示了校准算法计算的磁倾角[度数]。<br><p>
 
-This dialog has a button to <b>write</b> the coefficients to the DistoX.<br>
-A warning is given if the data direction distribution is below 95%, or the calibration average error is above 0.5&deg;.
+此对话框还有一个按钮，可以将系数<b>写入</b>到DistoX中。
+如果数据方向分布低于95%，或者校准平均误差超过0.5°，会发出警告。
 <br><p>
-
 
 </body></html>

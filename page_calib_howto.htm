@@ -1,65 +1,59 @@
 <html><body>
 
-<h4>DistoX HOW TO CALIBRATE</h4>
+<h4>DistoX如何进行校准</h4>
 
-The DistoX needs to be calibrated before using. The calibration is a transformation of the data that accounts for
-the non-perfect orthogonality of the axis of the sensors, their misalignment with the laser direction,
-and effects of the electronics on the magnetic field.<br><p>
+在使用之前，需要对DistoX进行校准。校准是一种转换数据的过程，考虑了传感器轴的非完美正交性，它们与激光方向的不对齐，以及电子设备对磁场的影响。<br><p>
 
-To compute the coefficients of this transformation, you must take a number of "accurate" calibration data
-recording the raw readings of the sensors. This occurs when the DistoX is in "calibration mode".<br><p>
+为了计算这种转换的系数，您必须在DistoX处于“校准模式”时获取一些“准确”的校准数据，记录传感器的原始读数。<br><p>
 
-The calibration data must be taken in a place free from magnetic influences, eg, in a cave or in a wood.
-Beware of metal objects and electronic objects that might affect the DistoX.<br><p>
+校准数据必须在没有磁场干扰的地方获取，例如洞穴或树林中。要注意金属物体和可能影响DistoX的电子设备。<br><p>
 
-The data must cover all directions and for each direction you must take a group of four data at different rotation about the laser axis.<br> 
-The best way is to take 14 groups of four data each, eight groups in the directions of the corners of a cube, and six in those of the centers of the faces. The four data in each group should be taken rotating the DistoX by 90&deg; between one and the next. You can take more than 14 groups of data; the more the better.<br>
-At a minimum you must take four groups of four data (with different roll) in four directions at 90&deg; in the horizontal plane,
-as if these directions were going from the center of a cube towards the center of four side-faces.
-The other 40 data do not have to be taken very carefully if the <i>PocketTopo</i> group policy is used, because they are treated as individual data.
-You can take more individual calibration data.<br><p>
+数据必须涵盖所有方向，对于每个方向，您必须在围绕激光轴旋转不同角度的情况下采集四组数据。<br>
+最佳方法是采集14组每组四个数据，其中八组在立方体角的方向，六组在面的中心方向。每组四个数据应在两次采集之间将DistoX旋转90°。您可以采集超过14组的数据，越多越好。<br>
+最少需要采集四组四个数据（具有不同的翻滚角），分别在水平平面上的四个方向上，就好像这些方向从一个立方体的中心指向四个侧面的中心。
+其他40个数据不需要非常仔细地采集，如果使用了<i>PocketTopo</i>组策略，则会将其视为单独的数据。
+您可以采集更多单独的校准数据。<br><p>
 
-The calibration data that will form a group must be taken with care. Inaccurate group data will result in a bad calibration.
-Therefore use fixed points (eg, a point in the wall, or on a tree) and far apart (a few meters) so that the accuracy of pointing the laser is better than the wanted calibration accuracy (2 cm at 5 m are about 0.2&deg;).<br><p>
+将形成一组的校准数据必须小心采集。不准确的组数据会导致不良的校准结果。
+因此，使用固定点（例如墙上或树上的点）并且距离较远（几米），以使激光对准精度优于所需的校准精度（5米处2厘米约为0.2°）。
+<br><p>
 
-After you have taken the calibration data, download them with TopoDroid. You do not need to wait to take all the calibration
-data to download them: when you download some data these are added to those already in the calibration.
-Therefore if, by mistake you take five data instead of four, download the data and delete one of them in TopoDroid.<br><p>
+在采集校准数据后，使用TopoDroid下载它们。您不需要等待采集所有校准数据后再下载它们：当您下载一些数据时，它们将添加到已经存在于校准中的数据中。
+因此，如果错误地采集了五个数据而不是四个，请下载数据并在TopoDroid中删除其中一个。<br><p>
 
-Before computing the calibration you must tell TopoDroid how the calibration data are divided in groups, i.e., how groups are assigned to data.
-The groups are denoted with positive numbers. A data with group number zero or no group, is not used to compute the calibration.
-Deleted data have group -1 and are usually not shown in the list.<br><p>
+在计算校准之前，您必须告诉TopoDroid校准数据如何分组，即如何将组分配给数据。
+组用正数表示。组号为零或无组号的数据不会用于计算校准。
+删除的数据组号为-1，通常不会显示在列表中。<br><p>
 
-TopoDroid implements two policies to assign groups automatically:
+TopoDroid实现了两种自动分配组的策略：
 <ul>
-<li><i>TopoDroid</i>: all data divided in groups of four data. This is the default policy</li>
-<li><i>PocketTopo</i>: four groups of four data, followed by individual data</li>
-<!-- li>"data group assignment based on the angle discrepancy between data</li -->
+<li><i>TopoDroid</i>：将所有数据分为四个数据一组。这是默认策略。</li>
+<li><i>PocketTopo</i>：四组四个数据，然后是单独的数据。</li>
+<!-- li>"基于数据角度差异的数据组分配</li -->
 </ul>
 <br>
-The group numbers can be assigned or changed by editing the calibration data. Tap on a data entry in the list to open the data editing dialog.
+组号可以通过编辑校准数据来分配或更改。点击列表中的数据条目以打开数据编辑对话框。
 <br>
 
-When the groups are defined, you can compute the calibration.
-Besides the calibration coefficients, the dialog shows the average error (and the "delta" of the original algorithm),
-the standard deviation of the error, and the maximal error.
-Furthermore there is a histogram with the distribution of errors for the calibration data. This plot has two vertical lines:
-a yellow mark at 0.5&deg; and a red one at 1.0&deg;<br><p>
+在定义组后，您可以计算校准。
+除了校准系数外，对话框还显示了平均误差（以及原始算法的“delta”），
+误差的标准差以及最大误差。
+此外，还有一个误差分布的直方图，该图显示了校准数据的误差分布。此图有两条垂直线：
+黄色标记为0.5°，红色标记为1.0°。<br><p>
 
 <img src="calib_data.png" >
 <br>
 
-To summarize, to calibrate the DistoX you need to:
+总之，要对DistoX进行校准，您需要：
 <ul>
-<li>turn the DistoX in calibration mode</li>
-<li>take the data of the calibration data</li>
-<li>download the data to the app</li>
-<li>assign the groups to the data (automatically or manually)</li>
-<li>compute the calibration coefficients</li>
-<li>upload the coefficients to the DistoX</li>
-<li>revert the DistoX to normal mode</li>
+<li>将DistoX设置为校准模式</li>
+<li>采集校准数据</li>
+<li>将数据下载到应用程序</li>
+<li>为数据分配组（自动或手动）</li>
+<li>计算校准系数</li>
+<li>将系数上传到DistoX</li>
+<li>将DistoX恢复为正常模式</li>
 </ul>
 <br><p>
 
 </body></html>
-

@@ -1,37 +1,35 @@
 <html><body>
 
-<h4>DistoX CALIBRATION Import/Export</h4>
+<h4>DistoX校准的导入/导出</h4>
 
-<b>Calibration import</b><br>
-A calibration can be imported from a CSV calibration file.<br><p>
+<b>导入校准</b><br>
+可以从CSV校准文件导入校准。<br><p>
 
-The import dialog is opened from the <i>Import</i> button in the <i>Calibration</i> list dialog.<br><p>
+导入对话框从<i>Calibration</i>列表对话框中的<i>Import</i>按钮中打开。<br><p>
 
-This dialog displays the list of the calibration CSV files.<br>
-Tap the entry you want to import.<br><p>
+此对话框显示了校准CSV文件的列表。<br>
+点击您要导入的条目。<br><p>
 
-The import fails if the file does not contain a calibration,
-or the calibration is already present.<br>
-It can also fail if the device bluetooth address written in the calibration is different from that of the
-current device.<br><p>
+如果文件中不包含校准，或者校准已存在，则导入将失败。<br>
+如果校准中写入的设备蓝牙地址与当前设备的地址不同，导入也可能失败。<br><p>
 
-<b>Calibration CSV export</b><br>
+<b>校准CSV导出</b><br>
 
-A DistoX calibration can be exported in CSV (text) format.<br><p>
+可以将DistoX校准以CSV（文本）格式导出。<br><p>
 
-The export dialog is opened from the <i>Export</i> menu of the <u>Calibration Info window</u>.<br><p>
+导出对话框从<i>Calibration Info window</i>的<i>Export</i>菜单中打开。<br><p>
 
-The calibration CSV export format contains the calibration details (name, date, device bluetooth address, comment, algorithm), followed by the calibration data,
-and the calibration coefficients.<br><p>
+校准CSV导出格式包含校准详细信息（名称、日期、设备蓝牙地址、注释、算法），然后是校准数据，
+以及校准系数。<br><p>
 
-Each data line contains:
+每行数据包含：
 <ul>
-<li>data index</li>
-<li>G and M values (six integers)</li>
-<li>group</li>
-<li>azimuth, clino and roll</li>
-<li>error</li>
-<li>status</li>
+<li>数据索引</li>
+<li>G和M值（六个整数）</li>
+<li>组</li>
+<li>方位角、俯仰角和翻滚角</li>
+<li>误差</li>
+<li>状态</li>
 </ul>
 <br><p>
 
