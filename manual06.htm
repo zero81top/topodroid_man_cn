@@ -1,46 +1,148 @@
 <html><body>
-<h3>[6] DistoX测量数据窗口</h3>
+<h3>[6] 测量数据窗口</h3>
 
-<b>仅适用于DistoX、DistoX2和DistoXBLE</b><br><p>
+测量<u>数据窗口</u>显示了测量的测点列表。<br><p>
 
-<u>测量数据窗口</u>显示测量数据列表。这些数据是从DistoX设备中下载的测量数据。
-每个测量数据行包含以下数据信息：
-<ul style="margin-top=0">
-<li>测站点名：标识测量点的名称</li>
-<li>主线：测站点所属的主线名称</li>
-<li>侧线：测站点所属的侧线名称</li>
-<li>距离：测量得到的距离</li>
-<li>方位：测量得到的方位角</li>
-<li>倾角：测量得到的倾角</li>
-<li>备注：可选的备注信息</li>
+标题显示了测量名称，以及在多/双设备模式下，活动设备。
+标题的颜色取决于当前的测站分配策略：
+<ul>
+<li>蓝色：前视策略</li>
+<li>深蓝色：后视策略</li>
+<li>粉红色："三脚架"策略</li>
+<li>紫色："后视"策略</li>
+<li>红色："磁异常"策略</li>
+<li>橙色："toporobot"策略</li>
+</ul><br><p>
+
+通过测点数据和测站名称的前景和背景颜色显示测点的属性。
+<br><p>
+
+TopoDroid区分四种类型的测点（以不同的颜色显示）："主线", "重复主线", "侧线", 和 "空白"。
+侧线可以进一步分类为"交叉"（X），水平（H），垂直（V），和"扫描"（扫描模式下获取的测点）。
+<a href="page_shot_edit1.htm">侧线 类别</a> X-H-V 默认是禁用的 [G].<br><p>
+
+测点数据前景颜色：
+<ol>
+<li>[白色] "主线"（一组重复测量的第一次测量）：此次测量设置了“从”和“到”测站</li>
+<li>[灰色] 重复主线数据（一组主线测量的后续测量）：这些测量不需要设置测站</li>
+<li>[蓝色] 侧线：它只有一个测站，通常是“从”测站</li>
+<li>[绿色] X-侧线</li>
+<li>[深蓝色] H/V-侧线</li>
+<li>[浅绿色] 扫描侧线</li>
+<li>[橙色] 空白测点，即，测站尚未设置的测点</li>
+<li>[黄色]: 反向主线（后视策略）</li>
+<li>[紫色]: 空白主线</li>
+</ol><p>
+
+测点数据背景颜色：
+<ul>
+<li>[微红] <a href="page_accuracy.htm">不可靠</a>的测点，即“异常”场强的测点（仅限DistoX2）</li>
+<li>[橙色] 短主线</li>
+<li>[灰色] 已评论的测点</li>
+</ul><p>
+
+测站名前景颜色：
+<ul>
+<li>[亮绿色] 当前测站</li>
+</ul><p>
+
+测站名背景颜色：
+<ul>
+<li>[深绿色] 最后下载的测点</li>
+<li>[灰色] 多选集中的测点</li>
+<li>[深黄色] DistoX 反瞄数据</li>
+</ul><p>
+
+<img src="shots_list.png" alt="测点列表"/><p>
+
+<h4>测站名称</h4>
+测站名称是测点的属性，就像方位角或距离一样。
+然而，测站的名称是用来“连接”测点以形成中线。
+这既影响中线，也影响草图。<br>
+当主线测站的名称更改时，中线可能会改变。
+如果测站附加了一个横断面，该横断面将从中线解除链接（并可以稍后链接到另一个测站）。
+如果草图（平面图或剖面图）的参考测站（原点）的名称更改，草图可以从中线解除链接。<br><p>
+
+<h4>操作</h4>
+<ul style="margin-top:0">
+<li>点击测点数据会打开测点的<a href="page_shot_edit1.htm">编辑对话框</a></li>
+<!--li>点击一个测点的倾角：测点<a href="page_shot_edit2.htm">次要操作</a></li-->
+<li>点击一个测站：显示/隐藏该测站的侧线</li>
+<li>测站上的长按：选择/取消选择<a href="page_current.htm">“活动”测站</a></li>
 </ul><br><p>
 
 <h4>按钮</h4>
-<ul style="margin-top=0">
-<li><img src="btn_bluetooth.png" width="36" border="1">重置蓝牙或远程控制DistoX</li>
-<li><img src="btn_download.png" width="36" border="1">下载测量数据从DistoX</li>
-<li><img src="btn_numbers.png" width="36" border="1">为测站点分配主线和侧线编号</li>
-<li><img src="btn_cover.png" width="36" border="1">测量数据的方向分布</li>
-<li><img src="btn_search.png" width="36" border="1">打开搜索对话框</li>
+<ul style="margin-top:0">
+<li><img src="btn_download.png"> 数据<a href="page_download.htm">下载</a></li>
+<li><img src="btn_bluetooth.png"> <a href="page_bluetooth.htm">蓝牙</a></li>
+<li><img src="btn_mode.png"> 数据<a href="page_displaymode.htm">显示模式</a></li>
+<li><img src="btn_sketch.png"> <a href="page_plot_list.htm">草图</a></li>
+<li><img src="btn_note.png"> 测量<a href="page_survey_notes.htm">笔记</a></li>
+<li><img src="btn_plus.png"> 插入<a href="page_man_data.htm">手动</a>测点数据</li>
+<li><img src="btn_station.png"> <a href="page_saved_station.htm">已保存的测站</a></li>
+<li><img src="btn_azimuth.png"> <a href="page_azimuth.htm">延展参考</a>方位角</li>
+<li><img src="btn_search.png"> <a href="page_search.htm">测站/主线搜索</a></li>
+<li><img src="btn_refresh.png"> 刷新数据列表</li>
 </ul><br><p>
 
-<h4>蓝牙</h4>
-此按钮重置TopoDroid蓝牙连接。<br>
-它还允许用户远程控制DistoX[A]：打开或关闭激光，进行测量。测量数据会即时下载。<br>
-蓝牙按钮在TopoDroid进行测量时将被禁用。<br><p>
+<b>长按操作</b><br>
+<ul style="margin-top:0">
+<li>"Download": 设备切换 (仅用于多设备模式)</li>
+<li>"Sketch": 立即打开最近的草图</li>
+<li>"Manual data": 仪器校准对话框</li>
+<li>"Search": 跳转到下一个结果</li>
+</ul><br><p>
 
-<h4>下载测量数据</h4>
-"下载"按钮从DistoX设备中下载测量数据。下载的数据将添加到当前测量数据列表。<br>
-已下载的数据以灰色文本显示。未下载的数据以黑色文本显示。<br>
-您可以下载多个测量数据，它们会按照下载的顺序添加到列表中。<br><p>
+多测点选择按钮:<br>
+<ul style="margin-top:0">
+<li>设置测点延展到 <i>左</i></li>
+<li>翻转测点延展</li>
+<li>设置测点延展到 <i>右</i></li>
+<li>特殊操作 [T]</li>
+<li><i>剪切</i> 测点并将它们放入测点缓冲区</li>
+<li><i>复制</i> 测点到测点缓冲区</li>
+<li><i>关闭</i> 多测点选择</li>
+</ul><br><p>
 
-<h4>测站点主线和侧线编号</h4>
-使用"编号"按钮可以为测站点分配主线和侧线编号。您可以在测站点列表中选择一个或多个站点进行分组。选择站点后，点击"编号"按钮，然后选择对应的主线和侧线。选定的测站点会自动更新其所属的主线和侧线。<br><p>
+<h4>草图对话框</h4>
+通过"草图"对话框，您可以创建新的草图或打开现有的草图。有一个按钮用于创建新的草图，以及当前调查草图的两列列表。左列的项目将以平面图视图打开草图，右列的项目将以剖面图视图打开它。您还可以在<u>草图窗口</u>内切换不同的草图。<br><p>
 
-<h4>测量数据方向分布</h4>
-使用"方向分布"按钮可以查看测量数据的方向分布。该功能会显示一个图表，展示测量方位角的分布情况。<br><p>
+<h4>菜单</h4>
+<ul style="margin-top:0">
+<li><u>调查信息</u>: 调查信息窗口</li>
+<li><u>恢复</u>: 删除的项目 (测点或草图) <a href="page_undelete.htm">恢复</a></li>
+<li><u>照片</u>: 本次调查所拍摄的照片</li>
+<li><u>传感器</u>: 本次调查收集的传感器数据</li>
+<li><u>3D</u>: <a href="manual14.htm">3D查看器</a></li>
+<li><u>设备</u>: 切换到设备窗口</li>
+<li><u>设置</u></li>
+<li><u>帮助</u></li>
+</ul><br><p>
 
-<a href="manual05.htm">&lt; 校准数据窗口</a> |
-<a href="manual07.htm">绘图窗口 &gt;</a>
+<h4>调查设置</h4>
+<ul style="margin-top:0">
+  <li><i>团队</i>: 默认调查团队。如果该值不为空，则用它来设置创建新调查时的"团队"字段。填写您和常与您一起调查的探洞者的名字。[默认未设置]</li>
+  <li><i>测站策略</i>: 选择自动的 <a href="page_station_policy.htm">测站命名策略</a>。[默认 "splays+foresight"]</li>
+  <li><i>测站名称</i> 指定测站名称的类型，是字母数字型还是数字型 [默认 "字母数字型"]</li>
+  <li><i>起始测站</i>: 新调查的默认起始测站名称。可以在<i>新调查</i>对话框中重写。[默认未设置]</li>
+  <li><i>缩略图大小</i>: 照片缩略图的大小 [默认 200, 最小 80, 最大 400]</li>
+  <!-- ... 其他设置项 ... -->
+</ul><br><p>
+
+<div style="font-size:90%">
+<a href="page_geek.htm">自定义设置</a>: <i>最新测点及其超时</i>, <i>分数延展</i>, <i>侧线类别和着色</i>, <i>潜水模式</i>, <i>传感器</i>.
+</div><br><p>
+
+要退出调查数据窗口，请在您的设备上双击<i>返回</i>按钮。<br>
+如果启用了自动备份并设置了默认数据文件格式，则在关闭数据窗口时将导出数据。<br><p>
+
+<b>警告</b>
+由于Android的一个问题，列表上的第一个测点条目在编辑或点击后可能不会更新。
+如果发生这种情况，可以使用"刷新"按钮请求重新加载列表。
+<br><p>
+
+<a href="manual05.htm">&lt; 校准数据</a> |
+<a href="manual07.htm">测点列表 &gt;</a>
 
 </body></html>
+
