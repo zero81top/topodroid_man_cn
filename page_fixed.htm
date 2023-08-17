@@ -1,45 +1,43 @@
 <html>
 <body>
 
-<h4>GEO-POINT EDIT</h4>
+<h4>地理点编辑</h4>
 
-This dialog is opened tapping a point entry in the <a href="page_fixed_list.htm">Geo-points list</a> window.<br><p>
+通过点击<a href="page_fixed_list.htm">地理点列表</a>窗口中的一个点条目来打开此对话框。<br><p>
 
-The dialog shows
+对话框显示了
 <ul>
-<li>longitude, latitude and geoid altitude</li>
-<li>point <b>name</b> and <b>comment</b></li>
-<li>magnetic <b>declination</b> at the point (at the current date)</li>
+<li>经度、纬度和大地高</li>
+<li>点的<b>名称</b>和<b>注释</b></li>
+<li>该点的磁场<b>偏角</b>（在当前日期）</li>
 </ul><br><p>
 
-Buttons
+按钮
 <ul>
-<li><b>View</b> the point in a Location app (provided you have one installed)</li>
-<li><b>Clear</b> converted coordinates. This action is immediate.</li>
-<li><b>Convert</b> the geo-point coordinates to another reference system (using the app Proj4)</li>
-<li><b>Delete</b> the geo-point record</li>
+<li><b>查看</b> 该点在位置应用程序中的显示（前提是您已安装了位置应用程序）</li>
+<li><b>清除</b> 转换后的坐标。此操作是立即生效的。</li>
+<li><b>转换</b> 将地理点坐标转换为另一个参考系统（使用Proj4应用程序）</li>
+<li><b>删除</b> 地理点记录</li>
 </ul>
 
-If the coordinates of the geo-point have been entered manually, they can be edited.
-Coordinates taken with GNSS or imported from a GNSS app cannot be changed.
-The geoid altitude is editable, irrespective of the input method, if the appropriate setting
-is set.<br><p>
+如果地理点的坐标是手动输入的，则可以进行编辑。
+使用GNSS获取或从GNSS应用导入的坐标不能更改。
+无论输入方法如何，如果设置了适当的设置，大地高都是可编辑的。<br><p>
 
-A long-tap on the longitude or the latitude changes the display from DMS to degree and vice versa.<br><p>
+在经度或纬度上长按可以在DMS和度之间切换显示。<br><p>
 
-The geoid altitude is computed from the ellipsoidic altitude using the geoid model EGM2008.<br><p>
+大地高是使用椭球高度计算的，使用了椭球模型EGM2008。<br><p>
 
-The <b>Convert</b> button computes the geo-point coordinates in another Coordinate Reference System,
-using the app Proj4. The geoid altitude is used in the conversion.
-The converted coordinates (East, North, and altitude) and the estimated meridian convergence [deg]
-are displayed and stored in the database with the geo-point.<br><p>
+<b>转换</b> 按钮使用Proj4应用程序将地理点坐标转换为另一个坐标参考系统。
+在转换中使用了大地高度。
+转换后的坐标（东、北、高）和估计的子午线收敛 [度]
+在数据库中显示并存储在地理点中。<br><p>
 
-The magnetic declination is computed using the World Magnetic Model for 2020-2025 (this is replaced 
-with a more recent WMM when it is released).
-The uncertainty of the WMM model declination can be as large as 0.4 degrees in temperate regions.<br>
-Check the <b>save</b> box to set the magnetic declination into the survey.<br><p>
+磁场偏角是使用2020-2025年的世界磁场模型进行计算的（在发布更新的WMM时将其替换为更近期的模型）。
+WMM模型的偏角不确定性在温带地区可能高达0.4度。<br>
+勾选<b>保存</b>框以将磁场偏角设置到测量中。<br><p>
 
-The <b>Save</b> button commits the changes to the database.<br><p>
+<b>保存</b> 按钮将更改保存到数据库中。<br><p>
 
 
 </body>

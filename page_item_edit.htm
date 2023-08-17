@@ -1,71 +1,73 @@
+<!DOCTYPE html>
 <html>
 <body>
-<h4>SKETCH ITEM PROPERTIES EDITOR</h4>
 
-The sketch item properties editor dialog is opened by selecting a point (or the point) of the sketch item and from the <i>Note</i> button.
+<h4>草图项属性编辑器</h4>
+
+草图项属性编辑器对话框通过选择草图项的一个点（或该点）并点击<i>注释</i>按钮打开。
 <br><p>
 
-<b>Point items</b> properties:
+<b>点项</b> 属性：
 <ul>
-<li><b>size</b> (one of XS, S, M, L, XL)</li>
-<li><b>orientation</b>, if the point item is orientable</li>
-<li><b>layers</b>, the canvas views on which the point is displayed [T]</li>
-<li><b>text</b>, for "label" points</li>
-<li>generic Therion <b>options</b></li>
+<li><b>大小</b>（XS、S、M、L、XL之一）</li>
+<li><b>方向</b>，如果点项是可定向的</li>
+<li><b>图层</b>，点在其中显示的画布视图 [T]</li>
+<li><b>文本</b>，用于 "标签" 点</li>
+<li>通用的Therion <b>选项</b></li>
 </ul>
 <br>
 
-<b>Line items</b> properties:
+<b>线项</b> 属性：
 <ul>
-<li>line <b>type</b></li>
-<li><b>outline</b> (either "out" or "in")</li>
-<li><b>direction</b>, i.e. whether the line is directed or reversed</li>
-<li><b>layers</b>, the canvas views on which the line is displayed [T]</li>
-<li>a polycubic line can be made polyline, i.e., composed of segments instead of cubics</li>
-<li>the line can be <b>subsampled</b>, by removing intermediate points</li>
-<li>the line can be <b>closed</b>, by appending a last point at the position of the first</li> 
-<li>generic Therion <b>options</b></li>
+<li>线的 <b>类型</b></li>
+<li><b>外轮廓</b>（"out" 或 "in"）</li>
+<li><b>方向</b>，即线是定向的还是反向的</li>
+<li><b>图层</b>，线在其中显示的画布视图 [T]</li>
+<li>多次立方线可以变成多段线，即由线段组成而不是立方线</li>
+<li>线可以通过删除中间点进行<b>子采样</b></li>
+<li>线可以通过在第一个点位置附加一个最后一个点来<b>封闭</b></li> 
+<li>通用的Therion <b>选项</b></li>
 </ul>
 <br>
 
-<b>Area items</b> properties:
+<b>区域项</b> 属性：
 <ul>
-<li>area <b>type</b></li>
-<li><b>visibility</b> of the area border</li>
-<li><b>orientation</b>, if the area is orientable</li>
-<li><b>layer</b>, the canvas views on which the line is displayed [T]</li>
-<li>generic Therion <b>options</b></li>
+<li>区域的 <b>类型</b></li>
+<li>区域边界的 <b>可见性</b></li>
+<li><b>方向</b>，如果区域是可定向的</li>
+<li><b>图层</b>，区域在其中显示的画布视图 [T]</li>
+<li>通用的Therion <b>选项</b></li>
 </ul>
 <br>
 
-<b>Survey stations</b> properties
-(see also <a href="page_sketch_station.htm">sketch station editing</a>):
+<b>测站</b> 属性
+（另请参阅 <a href="page_sketch_station.htm">草图测站编辑</a>）：
 <ul>
-<li>make the station the <b>active</b> one, i.e. to continue the survey from it</li>
-<li>show the hidden midline (only if applicable)</li>
-<li>toggle the display of <b>splays</b> at the station (overriding the global choice of splay display)</li>
-<li>adding the station to the Therion export (if "therion auto-station" option is disabled)</li>
-<li>at-station <b>x-section</b> buttons</li>
+<li>将测站设置为 <b>活动</b> 测站，即从该测站继续测量</li>
+<li>显示隐藏的 <b>中线</b>（仅在适用时）</li>
+<li>切换在测站显示 <b>侧线</b>（覆盖全局侧线显示的选择）</li>
+<li>将测站添加到Therion导出（如果禁用了 "therion auto-station" 选项）</li>
+<li>测站的 <b>横断面</b> 按钮</li>
 </ul>
 <br>
 <br><p>
 
-<b>Survey shots</b> properties:
+<b>测量数据</b> 属性：
 <ul>
-<li><b>stations</b></li>
-<li>shot <b>comment</b></li>
-<li>the <b>extend</b> value</li>
-<li>the <b>flags</b>: "duplicate", "surface", or "commented"</li>
-<li>midline hiding</li>
-<li><b>auto-walls</b> generation [E]</li>
-<li>custom <b>color</b> (for splays) [T]</li>
+<li><b>测站</b></li>
+<li>测量 <b>备注</b></li>
+<li><b>延伸</b> 值</li>
+<li><b>标志</b>：“重复”，“表面”或“已注释”</li>
+<li>隐藏中线</li>
+<li><b>自动生成墙壁</b> [E]</li>
+<li>自定义的 <b>颜色</b>（用于侧线）[T]</li>
 </ul>
 <br>
 
 <div style="font-size=90%">
-The custom color is associated to the survey splay in the list, and is used to identify the splay in the sketches.
-It is saved in the database, but it is not exported in the ZIP.<br>
-The custom splay colors are cleared by a menu in the <u>Survey Info window</u>.
+自定义颜色与测量数据侧线在列表中关联，用于在草图中标识侧线。
+它保存在数据库中，但不会在ZIP中导出。<br>
+自定义侧线颜色可以在 <u>测量信息窗口</u> 的菜单中清除。
 </div><br><p>
 
 </body>

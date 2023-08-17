@@ -1,32 +1,34 @@
-<html><body>
+<!DOCTYPE html>
+<html>
+<body>
 
-<h4>SURVEY IMPORT</h4>
+<h4>测量数据导入</h4>
 
-This dialog is opened with a tap on the <i>Import</i> button of the <u>Main window</u>.<br><p>
+此对话框通过点击<u>主窗口</u>中的<i>导入</i>按钮打开。<br><p>
 
-It displays the list of supported import file formats:
-dat (Compass), svx (Survex), th (Therion), tro and trox (VisualTopo),
-csn (CaveSniper), top (PocketTopo), and TopoDroid zip archives.<br>
-The import file is selected with the system content provider.<br><p>
+它显示了支持的导入文件格式列表：
+dat（Compass）、svx（Survex）、th（Therion）、tro和trox（VisualTopo）、
+csn（CaveSniper）、top（PocketTopo）以及TopoDroid zip 归档。<br>
+导入文件是通过系统内容提供程序进行选择的。<br><p>
 
-For some formats it is possible to customize the import through a few flags.<br>
+对于某些格式，可以通过一些标志自定义导入设置。<br>
 
-<b>Compass (dat) import options</b>
+<b>Compass（dat）导入选项</b>
 <ul>
-<li><i>LRUD</i> if enabled LRUD values are imported and converted to splay shots</li>
-<li><i>Leg first</i> if enabled LRUD splays are placed after the leg</li>
-<li><i>Diving datamode</i> enable for data diving mode in the Compass file [T]</li>
+<li><i>LRUD</i> 如果启用，将导入并转换为侧线测点的LRUD值</li>
+<li><i>先导线测点</i> 如果启用，将在导线测点之后放置LRUD侧线测点</li>
+<li><i>潜水数据模式</i> 在Compass文件中启用数据潜水模式[T]</li>
 </ul><br><p>
 
-
-<b>VisualTopo (tro, trox) import options</b>
+<b>VisualTopo（tro、trox）导入选项</b>
 <ul>
-<li><i>LRUD</i> if enabled LRUD values are imported and converted to splay shots</li>
-<li><i>Leg first</i> if enabled LRUD splays are placed after the leg</li>
+<li><i>LRUD</i> 如果启用，将导入并转换为侧线测点的LRUD值</li>
+<li><i>先导线测点</i> 如果启用，将在导线测点之后放置LRUD侧线测点</li>
 </ul><br><p>
 
 <b>N.B.</b>
-Import may fail (and crash the app) due to failure on the database that TopoDroid cannot intercept.
-If this happens delete the partially imported survey and retry to import it.<br><p>
+由于TopoDroid无法拦截数据库上的故障，导入可能会失败（并使应用程序崩溃）。
+如果发生这种情况，请删除部分导入的测量数据，然后重试导入。<br><p>
 
-</body></html>
+</body>
+</html>

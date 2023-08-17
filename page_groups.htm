@@ -1,37 +1,39 @@
-<html><body>
+<!DOCTYPE html>
+<html>
+<body>
 
-<h4>DistoX CALIBRATION DATA GROUPS</h4>
+<h4>DistoX 校准数据分组</h4>
 
-This dialog is opened from the <i>Group</i> button of the <u>Calibration Data window</u>.<br><p>
+此对话框从 <u>校准数据窗口</u> 中的<i>分组</i>按钮打开。<br><p>
 
-Before computing the calibration coefficients the calibration data must be subdivided in groups of data having the same azimuth and inclination (but different roll).<br>
-Beware that a wrong group assignment can result in a failure to compute the calibration coefficients (usually due to too many iterations in the algorithm).<br><p>
+在计算校准系数之前，校准数据必须分成具有相同方位和倾角（但不同横滚）的数据组。<br>
+请注意，错误的分组分配可能导致无法计算校准系数（通常是由于算法中的迭代次数过多）。<br><p>
 
-The groups are identified by an integer number starting with 1.<br>
-A data with number 0 is listed but excluded from the coefficients computation.<br>
-Deleted data have negative group number, therefore setting group number -1 amounts to mark the data as "deleted".<br><p>  
+分组由一个整数编号来标识，从1开始。<br>
+编号为0的数据被列出，但在系数计算中被排除。<br>
+已删除的数据具有负分组编号，因此设置分组编号为-1等于标记数据为 "已删除"。<br><p>  
 
-You can assign the group number to each calibration data by hand (with the <i>Calibration data edit</i> dialog),
-or let TopoDroid assign the group numbers for you.
+您可以手动为每个校准数据分配分组编号（使用<i>校准数据编辑</i>对话框），
+或者让 TopoDroid 为您分配分组编号。
 <br><p>
 
-There are two automatic group assignment policies:
+有两种自动分组分配策略：
 <ol>
-<li><i>TopoDroid</i>: four data at a time for each group;</li>
-<li><i>PocketTopo</i>: four-at-a-time for the first 16 data (four groups), then each data is a group by itself;</li>
-<!-- li>groups based on the relative angle distance (direction difference).</li -->
+<li><i>TopoDroid</i>：每次为四个数据分配一个分组；</li>
+<li><i>PocketTopo</i>：前16个数据（四个分组）每次四个数据分为一组，然后每个数据都是一个单独的组；</li>
+<!-- li>基于相对角距离（方向差异）的分组。</li -->
 </ol>
 <br>
-The two policies gives equivalent calibrations, but
-with <i>TopoDroid</i> policy the app can compute the deviation of the calibrated data from the expected values, 
-on more data, and create a more populated histogram of residual errors.
+这两种策略都可以得到等效的校准，但是使用<i>TopoDroid</i>策略，应用程序可以计算校准数据与预期值之间的偏差，
+并且在更多数据上创建残差误差的直方图。
 <br><p>
 
-Actions:
+操作：
 <ul>
-<li><i>Reset groups</i>: all the data groups are reset</li> 
-<li><i>OK</i>: groups are assigned (only to non-deleted data without a group)</li>
+<li><i>重置分组</i>：所有数据分组都被重置</li> 
+<li><i>确定</i>：分组被分配（仅对没有分组的未删除数据）</li>
 </ul>
 <br><p>
 
-</body></html>
+</body>
+</html>

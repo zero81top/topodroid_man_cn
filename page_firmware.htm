@@ -1,90 +1,73 @@
-<html><body>
-<h4>DistoX2 FIRMWARE</h4>
+<html>
+<body>
 
-TopoDroid includes the DistoX2 firmwares v. 2.1, 2.2, 2.3, 2.4, and 2.5, which are all compatible with hardware 1.0.<br>
-Only v. 2.5 is compatible with hardware 1.1.<br> 
-TopoDroid includes also firmwares v. 2.6.1, 2.6.3 and 2.6.4 which are compatible with hardware 1.2,
-and firmware v. 2.7.0 compatible with hardware 1.3 (BLE).<br><p>
+<h4>DistoX2 固件</h4>
 
-<b>WARNING.</b><br>
-<b>Uploading an incompatible firmware makes your DistoX unusable.</b><br>
-<b>Carefully read all the messages before uploading a new firmware.</b><br><p>
+TopoDroid 包含了 DistoX2 固件版本 2.1、2.2、2.3、2.4 和 2.5，这些固件均与硬件版本 1.0 兼容。<br>
+只有版本 2.5 与硬件版本 1.1 兼容。<br>
+TopoDroid 还包括了与硬件版本 1.2 兼容的固件版本 2.6.1、2.6.3 和 2.6.4，
+以及与硬件版本 1.3（BLE）兼容的固件版本 2.7.0。<br><p>
+
+<b>警告。</b><br>
+<b>上传不兼容的固件会使您的 DistoX 变得无法使用。</b><br>
+<b>在上传新固件之前，请仔细阅读所有消息。</b><br><p>
 <p>
 
-<b>Firmware dialog</b><br><p>
+<b>固件对话框</b><br><p>
 
-Through the firmware dialog you can save a copy of the current firmware of your DistoX2, or upload a new firmware file.<br><p>
+通过固件对话框，您可以保存您的 DistoX2 的当前固件副本，或上传新的固件文件。<br><p>
 
-The dialog has a pair of radio buttons to specify whether to upload or to download the firmware.
-In the first case the user must select a firmware file.
-In the second case the user must enter the name of the output file for the firmware.<br>
+对话框中有一对单选按钮，用于指定是上传还是下载固件。
+在第一种情况下，用户必须选择一个固件文件。
+在第二种情况下，用户必须输入固件的输出文件名。<br>
 
-Next there is a bar with buttons
+接下来有一个带有按钮的栏目
 <ul>
-<li><i>help</i></li>
-<li><i>close</i> the dialog without doing anything</li>
-<li><i>OK</i> confirms either the upload or the download of the firmware</li>
+<li><i>帮助</i></li>
+<li><i>关闭</i> 对话框而不执行任何操作</li>
+<li><i>确定</i> 确认上传或下载固件</li>
 </ul><br><p>
 
-Before uploading a new firmware TopoDroid checks that it is compatible with the hardware version.
-Unfortunately there is no sure way to read the firmware version from the file content;
-To prevent uploading a bad file, 
-compares a signature block in the file (the first block after the bootloader blocks) and on the
-file checksum, against the known values.<br><p>
+在上传新固件之前，TopoDroid 会检查它是否与硬件版本兼容。
+不幸的是，没有确切的方法从文件内容中读取固件版本；
+为了防止上传错误的文件，
+会将文件中的签名块（在引导程序块之后的第一个块）与已知值进行比较，以及文件校验和进行比较。<br><p>
 
-The check result codes are (negative for failure):
+检查结果代码如下（失败时为负数）：
 <ul>
-<li>2100: firmware 2.1</li>
-<li>2200: firmware 2.2</li>
-<li>2300: firmware 2.3</li>
-<li>2400: firmware 2.4</li>
-<li>2412: firmware 2.4c</li>
-<li>2500: firmware 2.5</li>
-<li>2501: firmware 2.51</li>
-<li>2512: firmware 2.5c</li>
-<li>2610: firmware 2.6.1</li>
-<li>2630: firmware 2.6.3</li>
-<li>2640: firmware 2.6.4</li>
-<li>2700: firmware 2.7.0</li>
-<li>-200: failed either 2.1 or 2.2</li>
-<li>-230, -2300: failed 2.3</li>
-<li>-240, -2400: failed 2.4</li>
-<li>-250: failed either 2.5 or 2.51</li>
-<li>-246, -2412: failed 2.4c</li>
-<li>-256, -2512: failed 2.5c</li>
-<li>-99: generic failure</li>
+<li>2100：固件 2.1</li>
+<li>2200：固件 2.2</li>
+<li>2300：固件 2.3</li>
+<li>2400：固件 2.4</li>
+<li>2412：固件 2.4c</li>
+<li>2500：固件 2.5</li>
+<li>2501：固件 2.51</li>
+<li>2512：固件 2.5c</li>
+<li>2610：固件 2.6.1</li>
+<li>2630：固件 2.6.3</li>
+<li>2640：固件 2.6.4</li>
+<li>2700：固件 2.7.0</li>
+<li>-200：失败的 2.1 或 2.2</li>
+<li>-230、-2300：失败的 2.3</li>
+<li>-240、-2400：失败的 2.4</li>
+<li>-250：失败的 2.5 或 2.51</li>
+<li>-246、-2412：失败的 2.4c</li>
+<li>-256、-2512：失败的 2.5c</li>
+<li>-99：通用失败</li>
 </ul>
 
-The DistoX (v. 2 or BLE) must be booted in <b>bootloader mode</b>. Refer to the DistoX2 documentation for details.<br>
-The device must be turned on in bootloader mode because
-TopoDroid reads the signature block from the firmware that is
-already installed on the DistoX, before uploading a new firmware.<br>
-If the hardware versions are not compatible there is a warning.<br><p>
-<b>Beware that TopoDroid does not warn against uploading a firmware pre 2.5 on hardware 1.1.</b><br><p>
+DistoX（版本 2 或 BLE 版本）必须以<b>引导程序模式</b>启动。有关详细信息，请参阅 DistoX2 文档。<br>
+设备必须在引导程序模式下打开，因为
+在上传新固件之前，TopoDroid 会从已安装在 DistoX 上的固件中读取签名块。
+如果硬件版本不兼容，会有警告。<br><p>
+<b>请注意，TopoDroid 不会警告您在硬件版本 1.1 上上传版本 2.5 之前的固件。</b><br><p>
 
-Upon uploading a firmware, TopoDroid displays a message saying how many bytes have been written to the DistoX.
-If these are less than the firmware file size, the upload has failed.<br><p> 
+在上传固件时，TopoDroid 会显示一条消息，显示已写入 DistoX 的字节数。
+如果这些字节数小于固件文件大小，则上传失败。<br><p>
 
-<b>Firmware update procedure</b><br>
+<b>固件更新过程</b><br>
 <ol>
-<li>Make sure the DistoX is the selected active DistoX in TopoDroid</li>
-<li>Open the firmware dialog ("Firmware" menu) and select the firmware file to upload</li>
-<li>Check version of hardware and firmware of your DistoX: make sure laser is switched off (CLR) and press FUNC twice to show the version.
-You may also check the DistoX firmware and hardware versions with TopoDroid device info dialog.</li>
-<li>Switch off the DistoX, and switch it on in bootloader mode: press PLUS, MINUS and DIST together. 
-The display illumination switches on, but the screen remains empty.</li>
-<li>Upload the new firmware with TopoDroid</li>
-<li>Switch off the DistoX by pressing CLR</li>
-<li>Switch the DistoX on and check the new firmware version.</li>
-</ol>
-<br><p>
-
-If the DistoX does not turn on after a firmware upload, you ned to restart it in bootloader
-mode and try to upload a firmware again. To restart it in bootloader mode you must open it
-and jump two pins: see the docs on internet for details.
-<br><p>
-
-<b>Note</b><br>
-The firmware updates are always logged in the TopoDroid log file.<br><p>
-
-</body></html>
+<li>确保 DistoX 是 TopoDroid 中选定的活动 DistoX</li>
+<li>打开固件对话框（"固件" 菜单）并选择要上传的固件文件</li>
+<li>检查您的 DistoX 的硬件和固件版本：确保激光已关闭（CLR），然后按两次 FUNC 显示版本。
+您也可以使用 TopoDroid 设备信息对话框检查 DistoX 的固件和硬件

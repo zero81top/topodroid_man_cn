@@ -1,38 +1,40 @@
-<html><body>
+<html>
+<body>
 
-<h4>GNSS GEO-POINT</h4>
+<h4>GNSS 地理点</h4>
 
-This dialog is opened from the <i>GNSS</i> button of the <a href="page_fixed_list.htm">Geo-points</a> window.<br><p>
-  
-To use the GNSS the Android "Location" service must be enabled.
-For security reasons a generic app, like TopoDroid, cannot enable the GNSS.
-If it is not enabled, TopoDroid shows a dialog asking whether you want do enable it (through the "Settings" app).
-Remember to disable it when you are done, to save battery life.
+此对话框从<a href="page_fixed_list.htm">地理点</a>窗口的<i>GNSS</i>按钮中打开。<br><p>
+
+要使用GNSS，必须启用Android的"定位"服务。
+出于安全原因，通用应用程序（例如TopoDroid）无法启用GNSS。
+如果没有启用，TopoDroid会显示一个对话框，询问您是否要通过"设置"应用程序启用它。
+在完成后请记得将其关闭，以节省电池寿命。
 <br><p>
 
-Fields:
+字段：
 <ul>
-<li><b>station</b> name</li>
-<li><b>comment</b></li>
+<li><b>测站</b>名称</li>
+<li><b>注释</b></li>
 </ul>
 
-Buttons:
+按钮：
 <ul>
-<li><b>GNSS</b> starts/stops the geo-point location</li>
-<li><b>View</b> the point in a map app</li>
-<li><b>Save</b> the point</li>
+<li><b>GNSS</b> 开始/停止地理点定位</li>
+<li><b>查看</b> 在地图应用程序中查看该点</li>
+<li><b>保存</b> 保存该点</li>
 </ul>
 
-While searching for satellites the "GNSS" button becomes red (or green) displays the number of satellites in sight.
-When enough satellites are in view the button becomes green and the coordinates are displayed underneath.
-You should wait until the coordinate values are stable and the location accuracy is shown.
-Then stop the GNSS location tapping the "GNSS" button again.<br><p>
+在搜索卫星时，"GNSS"按钮会变为红色（或绿色），并显示视线内的卫星数。
+当有足够多的卫星在视线内时，按钮会变为绿色，并在其下显示坐标。
+您应等待，直到坐标值稳定并显示出定位的准确性。
+然后再次点击"GNSS"按钮以停止GNSS定位。<br><p>
 
-The reported accuracy depends on the phone hardware and the environment.<br>
-On Android before API-26 only the horizontal accuracy is displayed.
-On Android API-26 and later both the horizontal and the vertical accuracy are displayed.<br><p>
+报告的准确性取决于手机硬件和环境。<br>
+在Android API-26之前，只显示水平准确性。
+在Android API-26及更高版本中，同时显示水平和垂直准确性。<br><p>
 
-<b>Settings</b><br>
-Fine location time: how long to let the app do the fine location of a geo-point [default 60 s].<br><p>
+<b>设置</b><br>
+精确定位时间：让应用程序进行地理点的精确定位的时长 [默认60秒]。<br><p>
 
-</body></html>
+</body>
+</html>

@@ -1,37 +1,38 @@
+<!DOCTYPE html>
 <html>
 <body>
 
-<h4>DistoX CALIBRATION DATA</h4>
+<h4>DistoX 校准数据</h4>
 
-This dialog is opened tapping a data entry in the <u>Calibration Data window</u>.<br><p>
+通过在 <u>校准数据窗口</u> 中点击数据条目来打开此对话框。<br><p>
 
 <ul>
-<li><i>azimuth, inclination, roll</i></li>
-<li>calibration <i>error</i></li>
-<li><i>group</i> number entry field</li>
-<li><i>Save</i> the changes</li>
+<li><i>方位、倾角、横滚</i></li>
+<li>校准 <i>误差</i></li>
+<li><i>分组</i> 编号输入栏</li>
+<li>保存</li>
 </ul>
 <br><p>
 
-The buttons are
+按钮有
 <ul>
-<li><img src="btn_numbers.png" width="36" border="1"> reassign the groups from this data onward</li>
-<li><img src="btn_delete.png" width="36" border="1"> mark the data "deleted"</li>
+<li><img src="btn_numbers.png" width="36" border="1"> 重新分配从此数据开始的分组</li>
+<li><img src="btn_delete.png" width="36" border="1"> 标记数据为 "已删除"</li>
 </ul>
 <br><p>
 
-The item group can be set or changed. 
+可以设置或更改数据的分组。 
 <ul>
-<li><i>positive</i>: the data takes part to the computation of the calibration coefficients</li>
-<li><i>zero</i>: the data does not enter the computation</li>
-<!-- li><b>-1</b> (negative one): "delete" the data. This can be done also with the <u>Delete</u> button</li -->
+<li><i>正数</i>：数据参与校准系数的计算</li>
+<li><i>零</i>：数据不参与计算</li>
+<!-- li><b>-1</b>（负一）：将数据 "删除"。也可以使用<u>删除</u>按钮执行此操作</li -->
 </ul>
 
-Data with the same positive group number form a group.<br><p>
+具有相同正数分组编号的数据形成一组。<br><p>
 
-Deleted data are not removed from the database.<br>
-They are not usually shown in the calibration data list, are not taken into account in the automatic group assignment,
-and do not enter to the computation of the calibration coefficients.<br><p>
+已删除的数据不会从数据库中删除。<br>
+通常不会在校准数据列表中显示它们，不会被自动分组分配考虑，
+并且不会进入校准系数的计算中。<br><p>
 
 </body>
 </html>

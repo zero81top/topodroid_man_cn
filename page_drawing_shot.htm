@@ -1,69 +1,63 @@
 <html>
 <body>
 
-<h4>SKETCH SHOT</h4>
+<h4>草图测点</h4>
 
-This dialog is opened when you select a survey shot and tap the <u>Item</u> button in the <u>Drawing window</u> (in "edit" mode).
-<br><p>
+在<u>绘图窗口</u>中选择一个测点并点击<u>项目</u>按钮时，将打开此对话框（处于“编辑”模式）。<br><p>
 
-Shot properties:
+测点属性：
 <ul>
-<li>length, azimuth, and inclination</li>
-<li><b>stations</b></li>
-<li><b>shot type</b> (D forward, B backward, M manual).</li>
-<li><b>comment</b></li>
-<li>profile <b>extend</b>: "left" (-1), "vertical" (0), or "right" (+1)</li>
-<li>profile <b>fractional extend</b> slider (extended profile view legs only) [T]</li>
-<li><img src="btn_duplicate.png"  width="36" border="1"> "duplicate" flag</li>
-<li><img src="btn_surface.png"  width="36" border="1"> "surface" flag</li>
-<li><img src="btn_comment.png"  width="36" border="1"> "commented" flag</li>
-<li>checkboxes to <b>hide</b> the midline (legs only)</li>
-<li>color, if enabled (splay only)</li>
+<li>长度、方位和倾角</li>
+<li><b>测站</b></li>
+<li><b>测点类型</b>（D 前进，B 后退，M 手动）。</li>
+<li><b>备注</b></li>
+<li>剖面 <b>延展</b>： "左"（-1）， "垂直"（0），或 "右"（+1）</li>
+<li>剖面 <b>分数延展</b> 滑块（仅扩展剖面视图的主线）[T]</li>
+<li><img src="btn_duplicate.png"  width="36" border="1"> "复制" 标志</li>
+<li><img src="btn_surface.png"  width="36" border="1"> "表面" 标志</li>
+<li><img src="btn_comment.png"  width="36" border="1"> "已注释" 标志</li>
+<li>复选框用于隐藏主线（仅限平面图）</li>
+<li>颜色，如果启用（侧线）</li>
 </ul>
 <br><p>
 
-The <b>shot type</b> is orange if the leg is inconsistent with the siblings,
-and red if there is a possible magnetic problems.
+如果主线的测点类型与其他复测主线节点不一致，则<b>测点类型</b>会显示为橙色；
+如果可能存在磁性问题，则显示为红色。
 <br><p>
 
-<b>Save</b> confirms the changes and closes the dialog.<br>
-There is a warning if, upon editing a leg shot, it differs from another leg between the same stations more than one fourth in length, or 15&deg;.<br><p>
+<b>保存</b>确认更改并关闭对话框。<br>
+如果在编辑主线测点时，与相同测站之间的另一主线的长度超过四分之一或角度超过15°，将会出现警告。<br><p>
 
-<b>Cancel</b> and the <u>Back</u> key close the dialog without saving the changes.<br><p>
+<b>取消</b>按钮和<u>返回</u>键可在不保存更改的情况下关闭对话框。<br><p>
 
-<b>Midline hiding</b><br>
-Leg shots have checkboxes to hide the display of the midline on the side of either stations.
-The hiding stations are displayed either red or violet in the drawing. The hiding is reverted through the edit dialog of the station.<br><p>
+<b>隐藏主线</b><br>
+主线测点具有复选框，用于在测点的某一侧隐藏主线的显示。
+隐藏的测点在绘图中将显示为红色或紫色。可以通过测点的编辑对话框取消隐藏操作。<br><p>
 
-<b>Leg extend</b> [E]<br>
-In the extended profile legs are usually drawn either to the left, or vertical, or to the right (or not drawn at all).
-The choice among these options is the "extend" value, that specifies whether the leg is extended left (-1), vertically (0), or right (+1).
-When a leg is selected in the extended profile view a horizontal bar is drawn through its middle point.
-by swiping from the midpoint along the bar the user can quickly change the "extend" of the leg.
+<b>主线延展</b> [E]<br>
+在扩展的剖面中，主线通常会绘制到左侧、垂直或右侧（或根本不绘制）。
+选择这些选项中的一个，以指定主线是向左延展（-1）、垂直（0）还是向右延展（+1）。
+在扩展剖面视图中选择主线时，将通过中点绘制一个水平线。
+通过从中点沿着线滑动，用户可以快速更改主线的延展方式。
 <br><p>
 
-<b>Shot fractional extend</b> [T]<br>
-It is also possible to set a "fractional extend": a value between -1.5 and 1.5, instead of only the integer values -1 (left), 0 (vertical), and
-1 (right).
-By default the "extend" has an integer value and the fractional part is zero.
-The slider below the "extend" checkboxes changes the integer part and the fractional part of the shot "extend".<br><p>
+<b>主线分数延展</b> [T]<br>
+还可以设置“主线分数延展”：介于-1.5和1.5之间的值，而不仅仅是整数值-1（左侧）、0（垂直）和1（右侧）。
+默认情况下，“延展”具有整数值，分数部分为零。
+在“延展”复选框下方，滑块可以更改主线的“延展”的整数部分和分数部分。<br><p>
 
-The fractional part of the shot "extend" is set to zero when
+主线“延展”的分数部分在以下情况下设置为零：
 <ul>
-<li>the shot extend is set with a multi-shot action (except for the "flip" action)</li>
-<li>the shot extend is changed in the <u>Drawing window</u> using the yellow extend line</li>
-<li>the shot extend is changed in the shot edit dialog (of the <u>Survey Data window</u>)</li>
-<li>the shot extend is assigned by TopoDroid</li>
+<li>使用多主线测量数据操作设置主线延展（除“翻转”操作外）</li>
+<li>在<u>绘图窗口</u>使用黄色延展线更改主线延展</li>
+<li>在主线编辑对话框（在<u>测量数据窗口</u>中）更改主线延展</li>
+<li>主线延展由TopoDroid分配</li>
 </ul><br><p>
 
-To set a fractional extend you must enable the relative setting.
-As most map-drawing programs do not support fractional "extend", this setting is disabled by default.
-<br><p>
-
-<b>Splay color</b> [T]<br>
-It is possible to assign a color to each splay shot. The color is stored in the database and is thus shared among the sketches.<br>
-Splay coloring is determined by a setting [G]: either disabled, or selectable with a color picker, or among a color palette.<br>
-The color dialog has also a button to clear the splay color.
+<b>侧线颜色</b> [T]<br>
+可以为每个侧线测点分配一种颜色。颜色存储在数据库中，因此在不同草图中是共享的。<br>
+侧线着色由一个设置决定 [G]：是否禁用、是否可以使用颜色选择器或是否从颜色调色板中选择。<br>
+颜色对话框还有一个按钮，用于清除侧线颜色。
 <br><p>
 
 

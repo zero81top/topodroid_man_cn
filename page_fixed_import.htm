@@ -1,80 +1,80 @@
 <html>
 <body>
 
-<h4>GEO_POINT IMPORT</h4>
+<h4>导入地理点</h4>
 
-This dialog is opened from the <i>Import</i> button of the <a href="page_fixed_list.htm">Geo-points</a> window.<br><p>
+此对话框从<a href="page_fixed_list.htm">地理点</a>窗口的<i>导入</i>按钮中打开。<br><p>
 
-With this dialog you can import in TopoDroid the coordinates of a point acquired with one of the supported GNSS apps.
+通过此对话框，您可以导入由支持的GNSS应用程序获取的点的坐标到TopoDroid中。
 <br>
 <img src="gnss_apps.png">
 <br><p>
 
 <b>MobileTopographer</b><br>
-TopoDroid reads the point coordinates from a <i>MobileTopographer</i> point-list file.<br>
-If you do not select a <i>MobileTopographer</i> point-list file the app behaviour is undefined.
+TopoDroid从<i>MobileTopographer</i>点列表文件中读取点坐标。<br>
+如果您没有选择<i>MobileTopographer</i>点列表文件，应用程序的行为是不确定的。
 <br><p>
 <ol>
-<li><img src="mobiletopographer_flag.png"> Open <i>MobileTopographer</i> and find the point coordinates.</li>
-<li><img src="mobiletopographer_plus.png"> When you have reached a sufficient accuracy in the coordinates, save the point.</li>
-<li><img src="mobiletopographer_points.png"> You can also enter the point coordinates by hand (and save the point).</li>
-<li><img src="mobiletopographer_disk.png"> Save the point list. The list is saved in "MobileTopographer/pointlist"</li>
-<li>Import the coordinates in TopoDroid. The saved points are shown in a list; tap on the point to import.</li>
+<li><img src="mobiletopographer_flag.png"> 打开<i>MobileTopographer</i>并查找点坐标。</li>
+<li><img src="mobiletopographer_plus.png"> 当您在坐标中达到足够的准确性时，保存该点。</li>
+<li><img src="mobiletopographer_points.png"> 您还可以手动输入坐标（并保存该点）。</li>
+<li><img src="mobiletopographer_disk.png"> 保存点列表。列表保存在"MobileTopographer/pointlist"中</li>
+<li>在TopoDroid中导入坐标。保存的点会显示在列表中；点击点以导入。</li>
 </ol><br>
-<img src="mobiletopographer_updown.png"> Optionally, you can go to the list of saved points in <i>MobileTopographer</i>, and
-move the point you just got to the top with the arrows.<br><p>
+<img src="mobiletopographer_updown.png"> 选择性地，您可以进入<i>MobileTopographer</i>中保存的点列表，
+并使用箭头将您刚刚获取的点移到顶部。<br><p>
 
 <b>GPS Logger</b><br>
-The app displays the point coordinates and other infos.
-The track files are saved in the folder "gnss_log". They have an header with device info, and the points data in CSV records:
-constellation, latitute, longitude, altitude, speed, accuracy, and time.<br>
-The log can contain also raw GNSS measurements, navigation messages, and NMEA sentences.<br>
+该应用程序显示点坐标和其他信息。
+轨迹文件保存在"gnss_log"文件夹中。它们具有带有设备信息的头文件，以及CSV记录中的点数据：
+星座、纬度、经度、高度、速度、准确性和时间。<br>
+日志还可以包含原始GNSS测量、导航消息和NMEA语句。<br>
 <ol>
-<li><img src="gpslogger_btn1.png"> Start recording the track points.</li>
-<li><img src="gpslogger_btn2.png"> Stop the track recording.</li>
-<li>Finalize the track. The track is added to the "tracklist".</li>
+<li><img src="gpslogger_btn1.png"> 开始记录轨迹点。</li>
+<li><img src="gpslogger_btn2.png"> 停止轨迹记录。</li>
+<li>完成轨迹。将轨迹添加到"轨迹列表"。</li>
 </ol>
 <br><p>
 
 <b>GPSTest</b><br>
-The app displays the point coordinates and satellites data: fix, constellation, carrier frequencies, carrier/noise ratio, flags, elevation, azimuth.
-The point can be shown on the map (option in the "settings").
+该应用程序显示点坐标和卫星数据：定位、星座、载波频率、载波/噪声比、标志、仰角、方位角。
+可以在"设置"中选择在地图上显示该点（选项）。
 <ol>
-<li><img src="gpstest_btn1.png"> Open the share/export dialog.</li>
-<li><img src="gpstest_btn2.png"> The point coordinates can be copied to clipboard</li>
-<li><img src="gpstest_btn3.png"> or saved to file. It is important to check the "Include altitude" box.</li>
+<li><img src="gpstest_btn1.png"> 打开共享/导出对话框。</li>
+<li><img src="gpstest_btn2.png"> 可将点坐标复制到剪贴板</li>
+<li><img src="gpstest_btn3.png"> 或保存到文件。重要的是要选中"包括高度"框。</li>
 </ol>
 <br><p>
 
 <b>GPX Recorder</b><br>
-The points coordinates are saved in a track file that can be read by TopoDroid.
-Track files are in the folder "gpx_recorder".
-The format is xml and the points data are latitude, longitude, altitude, and time.<br>
+点坐标保存在一个TopoDroid可以读取的轨迹文件中。
+轨迹文件位于"gpx_recorder"文件夹中。
+格式是xml，点数据为纬度、经度、高度和时间。<br>
 <ol>
-<li><img src="gpxrecorder_start.png"> Start recording the points coordinates</li>
-<li><img src="gpxrecorder_stop.png"> Stop the recording.</li>
+<li><img src="gpxrecorder_start.png"> 开始记录点坐标</li>
+<li><img src="gpxrecorder_stop.png"> 停止记录。</li>
 </ol>
 <br><p>
 
 <b>GPS Point</b><br>
-TopoDroid reads the coordinates exported to a point file: latitude, longitude, altitude, and accuracy.<br>
+TopoDroid从导出到点文件的坐标中读取：纬度、经度、高度和准确性。<br>
 <ol>
-<li>The app displays a list of saved points</li>
-<li><img src="gpspoint_btn1.png"> Open the GNSS interface</li> 
-<li><img src="gpspoint_btn2.png"> Acquire the GNSS position</li> 
-<li>The app displays the point with the circle of uncertainty on the map. The point coordinates, and other infos, are shown in a box.</li>
-<li>Save the point when done.</li>
-<li>Select the point from the list, and export to (text) file.</li>
+<li>该应用程序显示已保存点的列表</li>
+<li><img src="gpspoint_btn1.png"> 打开GNSS界面</li> 
+<li><img src="gpspoint_btn2.png"> 获取GNSS位置</li> 
+<li>应用程序在地图上显示点的不确定圆圈。点坐标和其他信息显示在框中。</li>
+<li>完成后保存该点。</li>
+<li>从列表中选择该点，并导出到（文本）文件。</li>
 </ol>
 <img src="gpspoint_point.png"><br><p>
 
 <b>GPS Position</b><br>
-The app displays the point coordinates and the satellite data.<br>
+该应用程序显示点坐标和卫星数据。<br>
 <ol>
 <li><img src="gpsposition_btn1.png"></li>
-<li><img src="gpsposition_btn3.png"> Display the satellites data: fix, azimut, elevation, carrier/noise ratio, and flags (almanac, epherids)</li>
-<li><img src="gpsposition_btn2.png"> The position can be copied to clipboard</li>
-<li>or it can be saved to a file.</li>
+<li><img src="gpsposition_btn3.png"> 显示卫星数据：定位、方位角、仰角、载波/噪声比和标志（星历、星历）</li>
+<li><img src="gpsposition_btn2.png"> 位置可以复制到剪贴板</li>
+<li>或保存到文件。</li>
 </ol>
 <br><p>
 
