@@ -1,49 +1,49 @@
-<html><body>
-<h4>TopoDroid DATABASES</h4>
+<html>
+<body>
+<h4>TopoDroid数据库</h4>
 
-It is useful to have a rough idea about the organization of the information and the data in the databases. The units of work in TopoDroid are the surveys and the calibrations. A survey is a single survey session of a piece of cave. A calibration is a single DistoX calibration.<br>
-Surveys are stored in the "distox14.sqlite" database. There is one such database in every project folder.<br>
-Calibrations are stored in the "device10.sqlite" database, together with the device information. This database is global and is stored in the TopoDroid
-private "files" folder.<br>
+了解数据库中信息和数据的组织方式是很有用的。TopoDroid中的工作单位是测量和校准。测量是洞穴的一个单独勘测会话，校准是一个单独的DistoX校准。<br>
+测量数据存储在“distox14.sqlite”数据库中。每个项目文件夹中都有一个此类数据库。<br>
+校准数据存储在“device10.sqlite”数据库中，与设备信息一起存储。此数据库是全局的，存储在TopoDroid的私有“files”文件夹中。<br>
 <p>
  
-The most important table in the survey database is:
+测量数据库中最重要的表是：
 <ul>
-<li><b>surveys</b>: survey information</li>
+<li><b>surveys</b>：测量信息</li>
 </ul><br>
-The surveys records store the survey name, date, team, magnetic declination, initial station name and possibly a comment.<br>
+测量记录存储了测量名称、日期、团队、磁偏角、初始测站名称以及可能的备注。<br>
 
-Related to the surveys are the tables for:
+与测量相关的表包括：
 <ul>
-<li><b>shots</b>: survey data</li>
-<li><b>stations</b>: saved stations</li>
-<li><b>plots</b>: 2D sketches; plans, profiles, x-sections</li>
-<li><b>photos</b>; pictures associated to survey shots</li>
-<li><b>audios</b>; audio comments associated to survey shots</li>
-<li><b>sensors</b>: measurements associated to survey shots</li>
-<li><b>fixeds</b>: (geolocalized stations)</li>
-<!-- li><b>sketches</b>: 3D models</li -->
+<li><b>shots</b>：测量数据</li>
+<li><b>stations</b>：保存的测站</li>
+<li><b>plots</b>：2D草图；平面图、剖面图、横断面图</li>
+<li><b>photos</b>：与测量点关联的图片</li>
+<li><b>audios</b>：与测量点关联的音频评论</li>
+<li><b>sensors</b>：与测量点关联的测量数据</li>
+<li><b>fixeds</b>：（地理定位的测站）</li>
+<!-- li><b>sketches</b>：3D模型</li -->
 </ul><br><p>
 
-The most important tables in the device database are
+设备数据库中最重要的表是
 <ul>
-<li><b>devices</b>: devices information</li>
-<li><b>calibs</b>: calibrations information</li>
+<li><b>devices</b>：设备信息</li>
+<li><b>calibs</b>：校准信息</li>
 </ul><br>
  
-The calibs records contain the calibration name, date, DistoX device, algorithm, and the results of the last computation: coefficients, average error, maximum error, number of iterations.<br><p>
+校准记录包含校准名称、日期、DistoX设备、算法以及最后一次计算的结果：系数、平均误差、最大误差、迭代次数。<br><p>
 
-Related to the calibrations is the data table
+与校准相关的数据表是
 <ul>
-<li><b>gms</b>: calibration data</li>
+<li><b>gms</b>：校准数据</li>
 </ul><br><p>
 
-Finally each database has the table
+最后，每个数据库都有表
 <ul>
-<li><b>configs</b>: configuration values</li>
+<li><b>configs</b>：配置值</li>
 </ul><br><p>
 
-You can learn more about the data organization in the database by looking at it with a SQLite viewer.<br><p>
+您可以通过使用SQLite查看器查看数据库中的数据组织情况。<br><p>
 
-</body></html>
-
+</body>
+</html>

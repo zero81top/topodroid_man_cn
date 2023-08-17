@@ -1,19 +1,18 @@
-<html><body>
-<h4>Android R dialog</h4>
+<html>
+<body>
+<h4>Android R 对话框</h4>
 
-Starting with Android-11, TopoDroid cannot access files in the usual way, as of a Google requirement.<br>
+从Android-11开始，由于谷歌的要求，TopoDroid无法以通常的方式访问文件。<br>
 
-The app private files (device database, drawing symbols, firmware files, etc.) are stored
-in the app private space, "Android/data/com.topodroid.TDX/files", where other apps do not have
-access.<br>
-This folder is deleted by the system when you uninstall the app.
+应用的私有文件（设备数据库、绘图符号、固件文件等）存储在应用的私有空间中，
+即 "Android/data/com.topodroid.TDX/files"，其他应用程序无法访问。<br>
+卸载应用时，系统会删除此文件夹。
 <br> 
 
-The survey database and files are stored under "Documents/TDX/TopoDroid".<br>
-This folder is not deleted by the system when you uninstall the app,
-but <b>TopoDroid cannot access it any more if you uninstall and reinstall the app.</b><br>
-In that case you have to rename "Documents/TDX" and cold-start TopoDroid so that it creates
-its new "TDX".<br>
+测量数据库和文件存储在 "Documents/TDX/TopoDroid" 下。<br>
+卸载应用时，系统不会删除此文件夹，但是<b>如果您卸载并重新安装应用程序，TopoDroid将无法再次访问它。</b><br>
+在这种情况下，您需要将 "Documents/TDX" 重命名，并冷启动TopoDroid，以便它创建新的 "TDX" 文件夹。<br>
 
 
-</body></html>
+</body>
+</html>

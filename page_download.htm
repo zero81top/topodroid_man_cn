@@ -1,43 +1,38 @@
-<html><body>
+<html>
+<body>
+<h4>数据下载</h4>
 
-<h4>DATA DOWNLOAD</h4>
+<i>下载</i> 按钮启动与设备的连接以下载数据。
+连接处于活动状态时会保持为红色。如果您使用的是 <i>按需</i> 下载模式，在没有更多数据需要检索时连接会关闭。
+使用 <i>连续</i> 下载模式时，连接保持开放状态（并且数据会在拍摄时立即连续下载），直到设备和Android失去蓝牙连接。
+哪种模式最适合您取决于您的习惯。
+使用 <i>按需</i> 模式时，您可以集中精力进行草图绘制和其他任务，而不会被传入的数据打扰，当您下载数据时，您可以专注于这些数据（它们会被突出显示为蓝色）。
+另一方面，<i>按需</i> 下载需要暂停来获取数据，并且如果您在其中拍摄了多张照片，这些暂停尤其长。<br><p>
 
-The <i>Download</i> button starts a connection with the device to download data.
-While the connection is active it stays red. If you are using the <i>on-demand</i> download-mode the connection is closed when there are no more data to retrieve.
-With the <i>continuous</i> download-mode the connection remains open (and data are continuously downloaded as soon as they are taken)
-until the device and the Android lose the Bluetooth connection.  Which mode is best suited for you depends on your habits.
-With the <i>on-demand</i> mode you can concentrate on sketching and other tasks without being bothered by incoming data, and when you download the data
-you can focus on them (they are highlighted blue). On the other hand <i>on-demand</i> download requires pauses to get the data,
-and these are especially long if you took several shots in the between.<br><p>
+当与设备的蓝牙连接中断时（例如，设备距离Android过远，或者设备关闭），在 <i>按需</i> 模式下，数据下载将被中断。
+在 <i>连续</i> 模式下，TopoDroid 尝试每隔几秒钟重新连接设备。<br><p>
 
-When the Bluetooth connection with the device is broken (eg. the device gets too far from the Android, or it is switched off)
-in <i>on-demand</i> mode, the data download is interrupted.
-In <i>continuous</i> mode TopoDroid retries to connect to the device every few seconds.<br><p>
+当关闭 <u>测量数据窗口</u> 时，数据下载连接会终止。当窗口暂停时（显示关闭），下载连接不会中断。
+如果在 <i>连续</i> 模式下激活下载连接的同时打开草图，则会维持连接并下载数据（并在草图中显示）。<br><p>
 
-When the <u>Survey Data window</u> is closed the data download connection is terminated. The download connection is not interrupted when the
-window is paused (the display switches off). If you open a sketch while the download connection is active in <i>continuous</i> mode,
-the connection is maintained and the data are downloaded (and displayed in the sketch).<br><p>
-
-For the <i>Sap5</i> and <i>Bric4</i> data are always downloaded in <i>continuous</i> mode.<br><p>
+对于 <i>Sap5</i> 和 <i>Bric4</i>，数据始终在 <i>连续</i> 模式下下载。<br><p>
 
 <b>DistoXBLE</b><p>
 
-The data download from the DistoXBLE may fail the first time immediately after the <b>Android Bluetooth</b> has been enabled (ie, turned on).
-In this case switch the DistoXBLE off and on, and try again to download data.<br><p>
+从 DistoXBLE 下载数据可能会在 <b>Android 蓝牙</b> 启用后（即开启后）的第一次失败。
+在这种情况下，将 DistoXBLE 关闭然后重新开启，然后再尝试下载数据。<br><p>
 
 <b>Bric4</b><br>
 
-The data download from the <i>Bric4</i> can be limited to only the essential values (distance, azimuth, clino, and little more), or
-complete, with all the information transferred by the Bric4 protocol.<br><p>
+从 <i>Bric4</i> 下载数据可以仅限于必要的值（距离、方位角、俯仰角等），或者完整地传输 Bric4 协议传输的所有信息。<br><p>
 
-The complete protocol includes the "index" of the shot. By default TopoDroid uses the <i>Bric4 index</i> as data index
-in the database table, if it receives it. Since the data index must be unique, if TopoDroid receives a shot with an index that
-is already in the database, a novel value is used instead of the <i>Bric4 index</i>.<br>
+完整协议包括测量的 "索引"。默认情况下，如果 TopoDroid 接收到，则将 <i>Bric4 索引</i> 用作数据库表中的数据索引。
+由于数据索引必须唯一，如果 TopoDroid 接收到具有数据库中已有索引的测量，则会使用新的值代替 <i>Bric4 索引</i>。
+<i>Bric4 索引</i> 可以通过 <i>高级菜单 | 内存清除</i> BRIC4 命令重置。<br>
 
-The Bric4 index can be reset with the <i>Advanced menu | Memory clear</i> BRIC4 command.<br>
+还可以禁用使用 <i>Bric4 索引</i> [G]，并让 TopoDroid 为数据索引分配递增值。<br><p>
 
-It is possible to disable the use of the <i>Bric4 index</i> [G], and let TopoDroid assign incremental values to the data index.<br><p> 
+<!-- u>警告</u>。Bric4 "内存清除" 后的第一个测量不会到达 TopoDroid。<br><p -->
 
-<!-- u>WARNING</u>. The first shot after a Bric4 "memory clear" does not arrive to TopoDroid.<br><p -->
-
-</body></html>
+</body>
+</html>

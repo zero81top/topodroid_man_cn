@@ -1,74 +1,71 @@
 <html>
 <body>
 
-<h4>SKETCH REFERENCES</h4>
+<h4>草图参考</h4>
 
-This dialog is opened from the <i>Reference</i> button of the <u>Drawing window</u>.<br><p>
+此对话框从<u>绘图窗口</u>的<i>参考</i>按钮中打开。<br><p>
 
-The column contains the sketch references,
+列包含了草图参考，
 <ul>
-<li><b>legs</b>, survey midline (white)</li>
-<li><b>splays</b> (grey)</li>
-<li><b>latest</b> splays [G]</li>
-<li><b>stations</b> names (violet)</li>
-<li><b>sketch grid</b>, metric or yard</li>
-<li><b>scalebar</b>, reference scalebar and magnetic North/Upward arrow</li>
-<li><b>outline</b>, outline of another sketch</li>
-<li><b>fix refs</b>, allow sketch drag independently from shots (be carefull!!)</li>
+<li><b>导线</b>，测量中线（白色）</li>
+<li><b>分支</b>（灰色）</li>
+<li><b>最新</b>分支 [G]</li>
+<li><b>站点</b>名称（紫色）</li>
+<li><b>草图网格</b>，米制或码制</li>
+<li><b>比例尺</b>，参考比例尺和磁北/向上箭头</li>
+<li><b>轮廓</b>，另一个草图的轮廓</li>
+<li><b>固定参考</b>，允许独立拖动草图而不受测量影响（小心！！）</li>
 </ul><br><p>
 
-The "latest" splays can be highlighted with an adjustable color (default light blue) [G].
-With <i>on-demand</i> download mode, these are the splays that have been downloaded most recently.
-With <i>continuous</i> mode, these are all the splays downloaded during the last highlighting interval.
+"最新"分支可以使用可调整的颜色（默认为浅蓝色）[G] 进行突出显示。
+在<i>按需</i>下载模式下，这些是最近下载的分支。
+在<i>连续</i>模式下，这些是上一个突出显示间隔内下载的所有分支。
 <br><p>
 
-There are three sketch grids,
+有三个草图网格，
 <ol>
-<li>a grid at 1 unit spacing (dark grey)</li>
-<li>a grid at 10 units spacing (grey)</li>
-<li>a grid at 100 units spacing (light grey)</li>
+<li>1个单位间隔的网格（深灰色）</li>
+<li>10个单位间隔的网格（灰色）</li>
+<li>100个单位间隔的网格（浅灰色）</li>
 </ol>
 <br>
-The sketch grid units can be 1m, 1y, 2ft, 0.1m. The default is 1 m.<br>
-TopoDroid shows only the sketch grids that are appropriate for the zoom of the sketch display.
+草图网格单位可以为1m、1y、2ft、0.1m。默认为1m。<br>
+TopoDroid仅显示适合草图显示缩放的草图网格。
 <br><p>
 
-The scalebar is adapted to the sketch grid units (m, y, ft, dm) and has a small arrow indicating the magnetic North/Upward direction.
-If the survey declination is set the true North is indicated as a light blue line, at the declination angle to the magnetic North.
-If the magnetic declination is small the North blue line is very close to the magnetic North arrow.
-The legend on the scalebar has the same size as the station names.<br><p>
+比例尺适应草图网格单位（m、y、ft、dm），并带有一个指示磁北/向上方向的小箭头。
+如果设置了测量偏角，则真实北方以轻蓝色线条表示，与磁北方向的夹角相同。
+如果磁偏角很小，则北蓝线非常接近磁北箭头。
+比例尺上的图例与站点名称大小相同。<br><p>
 
-If there are other sketches, the outline of another sketch can be displayed (in grey) to help drawing
-the sketch. Checking the box opens a new dialog to pick the sketch to display, or to clear the outline
-display.<br>
-The outline of an x-section can be displayed at the relative section point.
-The display of the outline is turned on and off through the edit dialog of the section points.<br>
-The display of all the outlines is cleared when the sketch is closed.<br><p>
+如果有其他草图，可以显示另一个草图的轮廓（灰色）以帮助绘制草图。
+勾选框会打开一个新的对话框，以选择要显示的草图，或清除轮廓显示。
+可以在相对的剖面点处显示剖面的轮廓。
+轮廓的显示通过剖面点的编辑对话框进行打开和关闭。<br>
+关闭草图时，所有轮廓的显示都会被清除。<br><p>
 
-<b>Sketch shift and scale</b><br>
+<b>草图平移和缩放</b><br>
 
-A further checkbox [E/G] specifies whether the reference should be held fixed when
-shifting the drawing with a two-finger touch. 
-This is used to adjust a sketch imported from PocketTopo to the reference
-in the case it gets imported with a translation.
-The sketch can be zoomed with a three-finger touch.
+另一个复选框 [E/G] 指定在使用两指触摸移动绘图时，是否应保持参考固定。
+这用于调整从PocketTopo导入的草图到参考中，以防草图被导入时发生了平移。
+可以使用三指触摸对草图进行缩放。
 <br><p>
 
-<b>Canvas views</b> (levels)<br>
+<b>画布视图</b>（层级）<br>
 
-When canvas views are enabled [G], there is another column, on the right, to switch the views on and off.<br>
-A drawing item is displayed if it belongs to at least a view that is ON.<br>
-The <b>Base</b> (B) view is always ON. The other views are
+启用画布视图 [G] 后，右侧会出现另一列，用于切换视图的开关。<br>
+绘图项目将在至少一个打开的视图中显示。
+<b>基础</b>（B）视图始终打开。其他视图包括
 <ul>
-<li><b>Floor</b> (F)</li>
-<li><b>Decoration</b> (D)</li>
-<li><b>Ceiling</b> (C)</li>
-<li><b>Artifacts</b> (A)</li>
+<li><b>地板</b>（F）</li>
+<li><b>装饰</b>（D）</li>
+<li><b>天花板</b>（C）</li>
+<li><b>物件</b>（A）</li>
 </ul>
 <br><p>
 
-The views are denoted by an uppercase letter, B, F, D, C, and A, as indicated above.<br>
-The mnemonic names carry no semantics.<br><p>
+视图由大写字母 B、F、D、C 和 A 表示，如上所示。<br>
+助记名不带任何语义。<br><p>
 
 </body>
 </html>

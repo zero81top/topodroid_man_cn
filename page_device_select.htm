@@ -1,91 +1,83 @@
+<html>
+<body>
+<h4>设备选择</h4>
 
-<html><body>
-<h4>DEVICE SELECT</h4>
-
-TopoDroid supports the following device:
+TopoDroid支持以下设备：
 <ul>
-<li>DistoX (first version)</li>
-<li>DistoX2 (second version)</li>
-<li>DistoXBLE (third version)</li>
-<li>Sap5 (Shetland Attack Pony), only models with bluetooth</li>
-<LI>Bric4 (Bluetooth Ruggerized Integrated Cartographer)</li>
+<li>DistoX（第一版）</li>
+<li>DistoX2（第二版）</li>
+<li>DistoXBLE（第三版）</li>
+<li>Sap5（Shetland Attack Pony），仅支持带有蓝牙的型号</li>
+<LI>Bric4（Bluetooth Ruggerized Integrated Cartographer）</li>
 </ul>
 
-All devices must be paired with the Android.<br><p>
+所有设备都必须与Android进行配对。<br><p>
 
-Normally TopoDroid works with only one device. 
-The data can be downloaded continuously (<i>continuous</i> mode) or in batch (<i>on-demand</i> mode).
-The difference between the two modes is that the <i>continuous</i> mode remains active when the data download
-is finished, or the connection with the device is lost, while the <i>on-demand</i> mode is closed. <br><p>
+通常情况下，TopoDroid只与一个设备配合使用。
+数据可以连续下载（<i>连续</i>模式）或批量下载（<i>按需</i>模式）。
+两种模式之间的区别在于，<i>连续</i>模式在数据下载完成或与设备连接丢失后仍保持活动状态，而<i>按需</i>模式会关闭。<br><p>
 
-Sap5 and Bric4 download the data only in continuous mode.<br><p>
+Sap5和Bric4只在连续模式下下载数据。<br><p>
 
-With DistoX's TopoDroid can work with more than one device at once, although 
-the data are still downloaded from only one device at a tine.<br>
-The <i>data download mode</i> must be set to <i>multi</i>.
-When it is so a long-tap on the <i>download</i> button brings up a dialog to choose from which DistoX to download the data.<br><p>
+使用DistoX时，TopoDroid可以同时使用多个设备，尽管数据仍然只从一个设备下载。
+<i>数据下载模式</i>必须设置为<i>多</i>。
+当设置为多设备模式时，长按<i>下载</i>按钮会弹出一个对话框，选择从哪个DistoX下载数据。<br><p>
 
 <b>Shetland Attack Pony</b><br>
 
-TopoDroid supports the model of the Shetland Attack Pony, version 5 (Sap5), with bluetooth.<br>
-The device must have been previously "paired" with Android, using the <i>Settings</i> app.
-The PIN is "000000" (six zeros).<br>
-Afterward the Sap5 is listed among the known devices in the <i>Device Window</i>.
-It appears as "SAP XX MAC-address", where "XX" is the two-letter code of the Sap5, for example "HG".<br>
-To select the Sap5 as current device tap on the its entry in the list.<br><p> 
+TopoDroid支持Shetland Attack Pony型号5（Sap5），带有蓝牙功能。<br>
+设备必须先在Android上进行"配对"，使用<i>设置</i>应用程序。
+PIN码为"000000"（六个零）。<br>
+之后，Sap5将在<i>设备窗口</i>中列出在已知设备列表中。
+它会显示为"SAP XX MAC地址"，其中"XX"是Sap5的两个字母代码，例如"HG"。<br>
+要将Sap5选为当前设备，请点击列表中的其条目。<br><p>
 
-While connected, the Sap5 will transfer the reading of a shot values to the app, whether or not the shot data
-are stored or discarded on the device.<br><p>
+连接时，Sap5将将一个测量值传输到应用程序，无论测量数据是否在设备上存储或丢弃。<br><p>
 
-The Sap5 data transmission protocol does not include acknowledgment of the reception of the data. Therefore
+Sap5的数据传输协议不包括数据接收的确认。因此：
 <ul>
-<li>if Sap5 is not connected the shot values are <u>not transferred</u> to the app.</li>
-<li>upon reconnection the Sap5 does <u>not</u> transfer the shot data stored while not connected.</li>
+<li>如果Sap5未连接，则测量值将<u>不会传输</u>到应用程序。</li>
+<li>在重新连接时，Sap5<u>不会</u>传输在未连接时存储的测量数据。</li>
 </ul>
 <br><p>
 
-The Sap keeps in its internal memory the data that have been "stored".
-These can be retrieved as a Survex file, using the Sap PonyTrainer program.<br><p>
+Sap5将存储在其内部存储器中的数据称为"已存储"数据。
+可以使用Sap PonyTrainer程序将这些数据检索为Survex文件。<br><p>
 
-The calibration of the Sap5 is done by the device and does not require an external program.<br><p> 
+Sap5的校准由设备执行，不需要外部程序。<br><p>
 
 <b>Bric4</b><br>
 
-TopoDroid supports the Bric version 4.<br>
-The device must have been previously "paired" with Android, using the <i>Settings</i> app.<br>
-Afterward the Bric4 is listed among the known devices in the <i>Device Window</i>.
-It appears as "Bric4 code MAC-address", where the code is the four-digit code of the Bric4, for example "0039".<br>
-To select the Bric4 as current device tap on the its entry in the list.<br><p> 
+TopoDroid支持Bric4版本4。<br>
+设备必须先在Android上进行"配对"，使用<i>设置</i>应用程序。<br>
+之后，Bric4将在<i>设备窗口</i>中列出在已知设备列表中。
+它会显示为"Bric4代码MAC地址"，其中代码是Bric4的四位代码，例如"0039"。<br>
+要将Bric4选为当前设备，请点击列表中的其条目。<br><p>
 
-Once connected to a client, the Bric4 remembers the connection, even if turned off, therefore it stays
-"always connected".<br>
-When TopoDroid is connected, shot readings are immediately transferred to Android.
-If TopoDroid is not connected, the data are kept in memory, and transferred when the app is
-next connected.<br><p>
+一旦连接到客户端，即使关闭电源，Bric4也会记住连接，因此它会保持"始终连接"状态。<br>
+当TopoDroid连接后，测量值会立即传输到Android。
+如果TopoDroid未连接，则数据将保存在内存中，并在下次连接应用程序时传输。<br><p>
 
-The Bric4 data transmission protocol includes acknowledgment by Android,
-but it does <u>not</u> include acknowledgment of the reception of the data by the app. 
-The protocol has a few seconds delay between the connection and the first data transfer, 
-and TopoDroid has a one-second delay after the last data, before closing the connection.
-By this means usually no shot is lost, although this is not guaranteed and shots <u>are lost</u>
-if the app is not notified by Android before the next shot arrives.
-<br><p> 
-
-The Bric4 stores the data in internal memory in CSV files. If connected to a PC via USB, the device
-appears as external memory and the CSV files can be copied to the PC.<br><p>
-
-The calibration of the Bric4 is done by the device and does not require an external program.<br><p> 
-
-The Bric4 can be controlled from the app. In particular it is possible to turn the laser on/off, and to take
-shots. The Bric4 has also a "scan mode" in which readings are taken continuously, about two every second.<br><p>
-
-TopoDroid can follow three different data protocols (according to a setting in the "custom" set).
-The first receives only the primary data (distance, azimuth and clino) which do not include the data ID number assigned by the Bric4.
-The other two receive the complete data. They differ as whether TopoDroid uses the provided ID number or assigns its own numbers.
-<br>
-When the complete data are received TopoDroid records the Bric4 error codes and values in the shot comment.
+Bric4的数据传输协议包括Android的确认，但不包括应用程序接收数据的确认。
+协议在连接后的几秒钟内延迟一些时间，然后才进行第一次数据传输，
+而TopoDroid在最后一个数据之后会延迟一秒钟后再关闭连接。
+通过这种方式，通常不会丢失测量值，但不能保证，并且在下一个测量值到达之前，
+如果Android在下一个测量值到达之前未通知应用程序，测量值<u>会丢失</u>。
 <br><p>
 
+Bric4将数据存储在内部存储器中的CSV文件中。如果通过USB连接到PC，设备会显示为外部存储器，CSV文件可以复制到PC中。<br><p>
 
+Bric4的校准由设备执行，不需要外部程序。<br><p>
 
-</body></html>
+Bric4可以从应用程序中进行控制。特别是可以控制激光的开/关以及进行测量。
+Bric4还具有"扫描模式"，在该模式下连续进行测量，每秒大约进行两次测量。<br><p>
+
+TopoDroid可以遵循三种不同的数据协议（根据"自定义"设置）。
+第一种只接收主要数据（距离、方位和倾角），这些数据不包括Bric4分配的数据ID编号。
+其他两种接收完整数据。它们的区别在于TopoDroid是否使用提供的ID编号，还是分配自己的编号。
+<br>
+当接收到完整数据时，TopoDroid会将Bric4的错误代码和值记录在测量值的注释中。
+<br><p>
+
+</body>
+</html>
