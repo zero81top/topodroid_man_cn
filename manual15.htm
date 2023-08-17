@@ -1,242 +1,237 @@
 <html><body>
-<h3>[15] 3D VIEWER (Cave3D)</h3>
+<h3>[15] 3D 查看器 (Cave3D)</h3>
 
-TopoDroid 3D viewer is designed for use in cave and it does not require internet connection.<br>
-It can load also other file formats: Therion (th, thconfig), Loch (lox), Compass (dat, mak), Survex (3d), and VisualTopo (tro, trox).<br><p>
+TopoDroid 3D查看器专为洞穴使用设计，不需要互联网连接。<br>
+它也可以加载其他文件格式：Therion (th, thconfig), Loch (lox), Compass (dat, mak), Survex (3d)，以及 VisualTopo (tro, trox)。<br><p>
 
-The 3D model can be opened either from a menu in the <i>Data Window</i>, or a button in the
-<i>Survey Info Window</i>.<br>
-The 3D model of a cave project can be opened from a button in the <i>Project Window</i>.
+3D模型可以从<i>数据窗口</i>的菜单中打开，或者从
+<i>测量信息窗口</i>中的一个按钮打开。<br>
+洞穴项目的3D模型可以从<i>项目窗口</i>中的一个按钮打开。
 <br><p>
 
-The model is shown with a reference cartesian grid (blue north, green east) or triplet (pink upward).
-The North is geographic if the magnetic declination is set.<br>
+模型以参考笛卡尔网格（蓝色指北，绿色指东）或三重组（粉色向上）显示。
+如果设置了磁偏角，北方则为地理北方。<br>
 
-If the data (survey or cave project) has fixed points these are used to compute the coordinates of the points
-in the model.
-If the fixed points have cartographic (projected) coordinates the cartesian grid is in the projected coordinate system.
-The coordinates in cartographic reference systems do not take into account the meridian convergence. 
-Therefore the north is not the cartographic north bu the direction of the meridian.<br>
-If the fixed points have only geographic (WGS84) coordinates,
-the coordinates are referred to the equator and the prime meridian and computed using the differences from the first fixed point:
-the latitude times the meridian radius, and the longitude times the parallel radius, respectively.<br>
+如果数据（测量或洞穴项目）具有固定点，这些点将用于计算
+模型中点的坐标。
+如果固定点具有地图（投影）坐标，笛卡尔网格位于投影坐标系统中。
+地图参考系统中的坐标不考虑子午线汇合。
+因此，北方不是地图的北方，而是子午线的方向。<br>
+如果固定点只有地理（WGS84）坐标，
+坐标则相对于赤道和本初子午线，并使用与第一个固定点的差异计算：
+纬度乘以子午线半径，和经度乘以平行线半径。<br>
 <br><p>
 
-There is no coordinate conversion. Therefore all the surveys in a cave project must be
-geo-referenced in the same coordinate system.
+没有坐标转换。因此，洞穴项目中的所有测量必须
+在同一坐标系统中进行地理参考。
 <br><p>
 
-
-
-<h4>BUTTONS</h4>
+<h4>按钮</h4>
 <ul style="margin-top:0">
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_turn.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_move.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_light.png"> <i>Mode</i>: either rotate the model or move the model or the light (if there is a DEM).  Two-finger always scale and translate the model.</li>
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_orthogonal.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_perspective.png"> <i>View</i>: either orthographic or perspective.</li>
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_no_dot.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_point_dot.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_name_dot.png"> <i>Stations</i>: hide or show stations, as green points or names.</li>
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_none.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_line.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_point.png"> <i>Splays</i>: hide or show splays, as segments or endpoints.</li>
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_wall_no.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_wall.png"> <i>Walls</i>: hide or show walls (if created).</li>
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_surface_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_surface_on.png"> <i>Surface</i>: hide or show surface DEM (if present).</li>
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_color.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_survey.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_depth.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_surface.png"> <i>Color</i>: midline color-coding: white, by-survey, denivelation, or surface.</li>
-<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_grid.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_axes.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_no.png"> <i>Frame</i>: XY grid with vertical line, or XYZ axes, or none.</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_turn.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_move.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_light.png"> <i>模式</i>：旋转模型、移动模型或调整光源（如果有DEM）。双指始终可以缩放和移动模型。</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_orthogonal.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_perspective.png"> <i>视图</i>：正交或透视。</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_no_dot.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_point_dot.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_name_dot.png"> <i>测站</i>：隐藏或显示测站，作为绿点或名称。</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_none.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_line.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_point.png"> <i>侧线</i>：隐藏或显示侧线，作为线段或端点。</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_wall_no.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_wall.png"> <i>墙壁</i>：隐藏或显示墙壁（如果创建）。</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_surface_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_surface_on.png"> <i>表面</i>：隐藏或显示表面DEM（如果存在）。</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_color.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_survey.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_depth.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_surface.png"> <i>颜色</i>：中线颜色编码：白色、按测量、高差或表面。</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_grid.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_axes.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_no.png"> <i>框架</i>：带垂直线的XY网格，或XYZ轴，或无。</li>
 </ul><br>
-The button icons are adjusted to the state of the program.
+按钮图标会根据程序的状态进行调整。
 <br><p>
 
-A few buttons have long-tap actions:
+一些按钮具有长按操作：
 <ul>
-<li><i>View</i>: Adjust the focal parameter of the perspective.</li>
-<li><i>Stations</i>: Toggle station selection on/off.</li>
-<li><i>Color</i>: Select the surveys to show or hide.</li>
-<li><i>Frame</i>: Open the <i>leg dialog</i> (display of surface/duplicate/commented legs).</li>
-</ul>
-<br><p>
+<li><i>视图</i>：调整透视的焦距参数。</li>
+<li><i>测站</i>：切换测站选择开/关。</li>
+<li><i>颜色</i>：选择要显示或隐藏的测量。</li>
+<li><i>框架</i>：打开<i>主线对话框</i>（显示表格数据）。</li>
+</ul><br>
 
-<h4>MENU</h4>
+<h4>菜单</h4>
 <ul style="margin-top:0">
-<li><i>Open file</i>: Select a survey file from the working folder.</li>
-<li><i>Export</i>: Export dialog.</li>
-<li><i>Info</i>: Survey 3D info.</li>
-<li><i>3D-Rose diagram</i>: Distribution of 3D directions.</li>
-<li><i>Rose diagram</i>: Distribution of azimuth directions.</li>
-<li><i>Reset</i>: Reset to orthogonal top view, at zoom one.</li>
-<li><i>Viewpoint</i>: Select a point of view among top, north, east, south, and west. For example "south" means looking at the cave from the South.</li>
-<li><i>Surface</i>: Transparency and DEM file. Centreline projection on surface.</li>
-<li><i>Wall models</i>: Create or clear a wall 3D reconstruction. Toggle plan/profile projections of walls</li>
-<li><i>Options</i></li>
-<li><i>Help</i></li>
+<li><i>打开文件</i>: 从工作文件夹中选择一个测量文件。</li>
+<li><i>导出</i>: 打开导出对话框。</li>
+<li><i>信息</i>: 显示洞穴的3D信息。</li>
+<li><i>3D-玫瑰图</i>: 显示3D方向的分布。</li>
+<li><i>玫瑰图</i>: 显示方位方向的分布。</li>
+<li><i>重置</i>: 重置为正交平面图，缩放比例为1。</li>
+<li><i>视点</i>: 在顶部、北面、东面、南面和西面中选择一个观察点。例如，“南”表示从南方观看洞穴。</li>
+<li><i>表面</i>: 调整透明度和DEM文件。主线投影到表面。</li>
+<li><i>墙体模型</i>: 创建或清除一个墙体3D重建。切换墙体的平面图/横断面投影。</li>
+<li><i>选项</i></li>
+<li><i>帮助</i></li>
 </ul><br><p>
 
-<h4>OPTIONS</h4>
+<h4>选项</h4>
 <ul style="margin-top:0">
-<!-- li><i>Work Directory</i>: Folder containing the survey files</li -->
 <li>
-  <u>3D Viewer</u>:
+  <u>3D查看器</u>:
   <ul>
-  <li><i>Below horizon view</i>: whether to allow viewpoints below the horizon [n].</li>
-  <li><i>Station points</i>: whether to always display station points (green) [n].</li>
-  <li><i>Station point size</i>: radius of station points [8 pxl].</li>
-  <li><i>Station text size</i>: size of station names [20 pt].</li>
-  <li><i>Selection radius</i>: Radius of selection for stations [1.0]</li>
-  <li><i>Distance message</i>: show distance message instead of dialog [n]</li>
-  <li><i>Station dialog</i>: whether to open the station dialog for the selected station instead of box [n].</li>
-  <li><i>Top grid</i>: Show the cartesian grid on the top [n].</li>
-  <li><i>Grid extent</i>: amount of cartesian grid extent around the survey [10 cells].</li>
+  <li><i>以下视角</i>: 是否允许地平线以下的视点 [n]。</li>
+  <li><i>测站点</i>: 是否始终显示测站点（绿色）[n]。</li>
+  <li><i>测站点大小</i>: 测站点的半径 [8 pxl]。</li>
+  <li><i>测站文本大小</i>: 测站名称的字体大小 [20 pt]。</li>
+  <li><i>选择半径</i>: 测站的选择半径 [1.0]</li>
+  <li><i>距离消息</i>: 显示距离消息而非对话框 [n]</li>
+  <li><i>测站对话框</i>: 是否打开选定测站的测站对话框，而不是框 [n]。</li>
+  <li><i>顶部网格</i>: 在顶部显示笛卡尔网格 [n]。</li>
+  <li><i>网格范围</i>: 围绕测量的笛卡尔网格范围 [10 cells]。</li>
   <li><u>DEM</u>:
     <ul>
-    <li><i>DEM buffer</i>: Extent of surface model around the survey on loading the surface model from a DEM file.</li>
-    <li><i>DEM max size</i>: maximum size of surface DEM in each direction [400 cells].</li>
-    <li><i>DEM reduction</i>: how to reduce the DEM if too large (subsample or clip) [subsample].</li>
+    <li><i>DEM缓冲</i>: 从DEM文件加载地表模型时，地表模型围绕测量的范围。</li>
+    <li><i>DEM最大尺寸</i>: 每个方向上地表DEM的最大尺寸 [400 cells]。</li>
+    <li><i>DEM缩减</i>: 如果DEM太大，该如何缩减（下采样或裁剪） [下采样]。</li>
     </ul>
   </li>
-  <li><u>Wall Model</u>:
+  <li><u>墙体模型</u>:
     <ul>
-    <li><i>Splay usage</i>: Which splays to use (none, normal, x-sections) [normal]</li>
-    <li><i>All splay</i>: Whether to use all the splays for the walls</li>
-    <li><i>Projected splays</i>: Whether to use projected splays on a normal plane [n]</li>
-    <li><i>Splay threshold</i>: splays outside the shot to keep [0.5]</li>
-    <li><i>Split triangles</i>: Whether to split intersecting wall triangles</li>
-    <li><i>Randomize points</i>: Add a small random vector to splays</li>
-    <li><i>Stretch walls</i>: Shift wall points by a small quantity along the leg</li>
-    <li><i>Powercrust</i>: Algorithm "delta" parameter</li>
+    <li><i>横断面使用</i>: 使用哪种横断面（无、正常、侧面）[正常]</li>
+    <li><i>全部横断面</i>: 是否使用所有横断面构建墙体</li>
+    <li><i>投影横断面</i>: 是否在法线平面上使用投影横断面 [n]</li>
+    <li><i>横断面阈值</i>: 保留距离测量点多远的横断面 [0.5]</li>
+    <li><i>分割三角形</i>: 是否分割相交的墙体三角形</li>
+    <li><i>随机化点</i>: 为横断面添加一个小的随机向量</li>
+    <li><i>拉伸墙体</i>: 沿着腿的方向微量移动墙体点</li>
+    <li><i>Powercrust</i>: 算法的“delta”参数</li>
     </ul>
   </li>
   </ul>
 </li>
 </ul><br><p>
 
-<b>TITLE LINE</b><br>
-The title bar shows the viewing parameters:
+<b>标题栏</b><br>
+标题栏显示查看参数：
 <ul>
-<li><i>C</i> and <i>A</i> clino and azimuth of the viewpoint.</li>
-<li><i>S</i> is the zoom factor.</li>
-<li><i>T</i> are the X-Y translations of the model.</li>
-<li><i>L</i> are the clino and azimuth of the light.</li>
+<li><i>C</i> 和 <i>A</i> 表示观察点的倾角和方位角。</li>
+<li><i>S</i> 是缩放因子。</li>
+<li><i>T</i> 是模型的X-Y平移。</li>
+<li><i>L</i> 是光源的倾角和方位角。</li>
 </ul>
 <br><p>
 
-<b>EXPORTS</b><br>
-Model can be exported as DXF, KML, GPX, STL or STL-binary, CGAL, LAS-binary, and shapefile.<br>
-The exported file is selected with the Android file manager.
+<b>导出</b><br>
+模型可以导出为DXF, KML, GPX, STL, STL-binary, CGAL, LAS-binary, 和 shapefile。<br>
+使用Android文件管理器选择要导出的文件。<br><p>
+
+导出对话框有包括横断面、墙体、测站和表面的选项。
+（并非所有导出格式都支持墙体和表面）。<br>
+模型也可以序列化为一个文本文件。<br><p>
+
+GPX项目的导出可以将所有的项目测量都包含在一个单独的轨迹中，或者为每个测量包含一个轨迹。
+这种行为由GXP导出设置“single-track”决定。<br><p>
+
+<b>网格/框架</b><br>
+笛卡尔网格/框架线分别为绿色（西-东），蓝色（南-北），和红色（垂直）。<br>
+从透视角度看，因为绿色线更靠近堆叠在一起，所以向北/南看网格线呈绿色。
+并且，向西/东看呈蓝色。
+为了帮助区分四个基本方向，西南角的网格线呈微红色。<br>
+默认情况下，笛卡尔网格位于测量图下方，但可以（可选地）设置在其上方。
 <br><p>
 
-The export dialog has options to include splays, walls, stations and surface.
-(Walls and surface are not supported in all export formats).<br>
-The model can be also serialized in a text file.<br><p>
+<b>测量</b><br>
+测量的侧线可以被隐藏、显示为线或端点。<br>
+测量的主线可以不着色，或者按照测量、高差（红到蓝）或
+模型含有DEM表面数据时按照表面下深度（蓝到红）进行着色。<br>
 
-The GPX export of projects can have all the project surveys in a single track, or include a track
-for each survey. The behavior is determined by the GXP export setting "single-track".<br><p>
+当未着色时，测量的主线为白色，表面主线为绿色，重复的主线为橙色，
+而有注释的主线为浅蓝色。<br>
 
-<b>GRID/FRAME</b><br>
-The cartesian grid/frame lines are green (west-east), blue (south-north), and red (vertical).<br>
-In perspective the grid lines look greenish to the north/south because the green lines stack together closer.
-And it looks blueish to the west/east.
-To help distinguish the for cardinal directions, the grid lines get slightly reddish at the west-south corner.<br>
-By default the cartesian grid is below the survey, but it can be set above it (optionally).
+“表面”、“重复”和“有注释”的主线可以通过长按最后的<i>框架</i>按钮打开的<i>主线对话框</i>进行开/关设置。
 <br><p>
 
-<b>SURVEY</b><br>
-The survey splays can be hidden, displayed as lines or endpoints.<br>
-The survey legs can be uncolored or colored by survey, by denivelation (red-to-blue) or by
-the depth beneath the surface (blue-to-red) if the model has a DEM surface.<br>
+<b>墙壁</b><br>
+文件打开时，墙壁模型不会自动计算，但必须通过“墙壁”菜单由用户请求。<br>
+有两个通用模型，<i>简单壳</i>，和<i>伪凸壳</i>，
+以及“仅调试”<i>powercrust</i>模型。
+前两者适用于侧线不密集的情况。最后一个适用于侧线密集的情况。<br>
 
-When uncolored the survey legs are white, the surface legs green, the duplicate legs orange, 
-and the commented legs light blue.<br>
+墙壁模型取决于侧线的数量和质量。
+质量差的侧线将导致模型质量差。<br>
 
-The "surface", "duplicate", and "commented" legs can be turned on/off with the <i>leg dialog</i> which
-is opened by a long-tap on the <i>Frame</i> button (last).
+计算在后台进行。
+完成后，可以通过“墙壁”按钮显示墙壁。
 <br><p>
 
-<b>WALLS</b><br>
-The wall model is not computed automatically when the file is opened, but it must be
-requested by the user through the "wall" menu.
-There are two general models, <i>simple hull</i>, and <i>pseudo convex-hull</i>, 
-and the "debug-only" <i>powercrust</i> model.
-The first two are suitable when the splay are not dense. The last one is for dense splays.<br>
-
-The wall model depends on the number and the quality of the splays.
-Poor splays will result in a poor model.<br>
-
-The computation is done in background.
-When done the wall can be displayed with the "wall" button.<br><p>
-
-The [debug-only] powercrust model includes also the projection of the walls on the horizontal plane (plan view), and on a vertical curtain
-along the survey (profile view). Their display is enabled through the "walls" menu.
+[仅调试] powercrust模型还包括墙壁在水平平面（平面图）上的投影，以及沿着测量线（剖面图）的垂直幕布上的投影。
+它们的显示可以通过“墙壁”菜单启用。
 <br><p>
 
-<b>SURFACE</b><br>
-If the (Therion or Loch) model contains surface data (Digital Elevation Model), the surface can be displayed either gray or
-with the texture (if available).<br>
-The surface dialog has a button to load a DEM from a file. The supported formats are ascii (.asc or .ascii) and Therion grid (.grid). 
-Only the relevant portion of the DEM file is loaded.<br>
-The survey and the DEM data file must be in the same (cartographic) Coordinate Reference System.
-If the survey fixed point coordinates have been transformed into another reference system,
-the transformed coordinates are used to reference the model and the DEM data must be
-in that model.
-If the survey has only long-lat (WGS84) coordinates, the WGS-84 system is used.<br>
-The DEM extent must cover the area of the model.<br><p>
+<b>表面</b><br>
+如果（Therion或Loch）模型包含表面数据（数字高程模型），表面可以显示为灰色或
+带纹理（如果可用）。<br>
+表面对话框有一个按钮，用于从文件加载DEM。支持的格式为ascii（.asc或.ascii）和Therion网格（.grid）。
+只加载DEM文件的相关部分。<br>
+测量和DEM数据文件必须在同一（地图）坐标参考系统中。
+如果测量的固定点坐标已经转换到另一个参考系统，
+则使用转换后的坐标来参照模型，而DEM数据必须
+在该模型中。
+如果测量只有经纬度（WGS84）坐标，则使用WGS-84系统。<br>
+DEM范围必须覆盖模型的区域。<br><p>
 
-The transparency of the surface is adjustable. If fully opaque the portions of surface behind others are hidden.<br>
-The projection of the survey centerline on the surface can be displayed (blue).<br>
-When the model has a surface, it can be colored by the depth beneath the surface.
+表面的透明度是可调的。如果完全不透明，则其他部分后面的表面部分将被隐藏。<br>
+可以显示测量中心线在表面上的投影（蓝色）。<br>
+当模型具有表面时，可以通过表面下深度对其进行着色。
 <br><p>
 
-If the model has a surface DEM, the surface texture can be loaded from a file.
-The supported file formats are GeoTiff and OSM.<br>
-The GeoTiff file must be in the same Cartographic Coordinate Reference System of the survey.
-[Tech note: if the file is 24-bit non-compressed or uses a colormap Cave3D tries to read only the portion
-covering the DEM area, otherwise the whole image
-is read in and portion area is extracted.]<br>
-The OSM texture (WGS84) can be loaded only for surveys and cave projects opened from TopoDroid.
-The texture displays the OSM lines.
+
+如果模型具有地表DEM，则可以从文件中加载地表纹理。
+支持的文件格式有GeoTiff和OSM。<br>
+GeoTiff文件必须与测量的制图坐标参照系统相同。
+[技术注：如果文件是24位非压缩的或使用了色彩映射，Cave3D尝试仅读取覆盖DEM区域的部分，
+否则整个图像将被读取，并提取出部分区域。]<br>
+只有从TopoDroid打开的测量和洞穴项目才能加载OSM纹理（WGS84）。
+纹理显示了OSM线条。
 <br><p>
 
-It is possible to visualize a point (yellow dot) on the surface by entering the East/North coordinates in the CRS of the model.<br>
+可以通过在模型的CRS中输入东/北坐标来在表面上可视化一个点（黄点）。<br>
 
-Models loaded from TopoDroid can get also GNSS points.
-If the app has permission to use the "Location" service, and this service is enabled, it is possible to
-get surface point with the Android GNSS.<br>
-given permissions to use it.<br>
-The app displays the last 10 points.
-<br><p> 
+从TopoDroid加载的模型也可以获取GNSS点。
+如果应用有权使用“位置”服务，并且该服务已启用，则可以
+使用Android GNSS获取地表点。<br>
+给予权限使用它。<br>
+该应用显示最后10个点。
+<br><p>
 
-<b>STATION ACTIONS</b><br>
-By default, when the stations are displayed, they can be selected tapping on the station point or name.<br>
-Station selection can be turned on/off with a long tap on the "station" button. When the stations are selectable
-the button has a red dot.<br><p>
+<b>测站操作</b><br>
+默认情况下，当测站被显示时，可以通过点击测站点或名称来选择它们。<br>
+可以通过在“测站”按钮上长按来打开/关闭测站选择。当测站可选时，
+按钮上会有一个红点。<br><p>
 
-The selected station is highlighted red, and its coordinates are shown in a blue bar at the bottom.
-If the model has a DEM, the depth of the station below the surface is included.<br>
-To unselect the station tap on the station again or on the bar.<br><p>
+选中的测站会被高亮为红色，它的坐标将在底部的蓝色栏中显示。
+如果模型具有DEM，则站点下的深度也会包括在内。<br>
+要取消选择站点，请再次点击站点或点击栏。<br><p>
 
 <img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_ruler_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_ruler_on.png"> 
-To measure distances between the selected station and another station, check the "measure" button in the bottom bar,
-and tap on the other station.
-The 3D distance between the two stations, its East, North, and vertical components, and the plane 2D distance are
-displayed in a dialog.
-If the two stations are connected along the centerline the "cave" distance is also shown
-and the cave-path between them is highlighted green.<br>
-Optionally, the values can be displayed in a brief message box instead of a dialog.  <br><p>
+要测量选定站点和另一个站点之间的距离，选中底栏中的“测量”按钮，
+然后点击另一个站点。
+两个站点之间的3D距离、其东、北和垂直分量，以及平面2D距离将
+在一个对话框中显示。
+如果两个站点沿中心线连接，则还将显示“洞穴”距离
+并且它们之间的洞穴路径将被高亮为绿色。<br>
+可选地，这些值可以在一个简短的消息框中显示，而不是在对话框中。  <br><p>
 
-<img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_station_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_station_on.png"> When the "station" button in the bottom bar is checked, the station position on the screen 
-if fixed under rotations and the
-selected station is highlighted orange.
+<img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_station_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_station_on.png"> 
+当底栏中的“站点”按钮被选中时，屏幕上的站点位置
+在旋转下固定，且
+选定的站点被突出显示为橙色。
 <br><p>
 
-<b>SKETCH LIFTING</b> (Experimental)<br>
-With surveys and cave-projects opened from TopoDroid it is possible to "lift" 2D sketches to the 3D model.
-The sketch must be exported (in TopoDroid) in "Cave3D" format. The exported file is in the "c3d" folder
-of TopoDroid. Next a sketch file can be loaded from the 3D viewer, and the sketch is lifted to adapt to the
-3D model.<br>
+<b>草图提取</b> (实验性)<br>
+对于从TopoDroid打开的测量和洞穴项目，可以将2D草图“提升”到3D模型。
+草图必须以“Cave3D”格式导出（在TopoDroid中）。导出的文件位于
+TopoDroid的“c3d”文件夹中。接下来，可以从3D查看器加载草图文件，并且草图会提升以适应
+3D模型。<br>
 
-The sketch dialog displays the list of opened sketches.<br>
-Each item has two checkboxes: the first to switch on/off
-the display of the sketch, the second to remove the sketch. The choices must be confirmed with the "OK" button.<br>
-There is a button to load a new sketch.<br>
-Finally there is a button to rebind the point icons, if they go black.
+草图对话框显示打开的草图列表。<br>
+每个项目都有两个复选框：第一个用于开/关
+草图的显示，第二个用于删除草图。选择必须通过“确定”按钮进行确认。<br>
+有一个按钮可以加载新的草图。<br>
+最后，如果它们变黑了，有一个按钮可以重新绑定点图标。
 <br><p>
 
-
-<a href="manual14.htm">&lt; Cave Projects</a> |
-<a href="manual16.htm">Index &gt;</a> 
+<a href="manual14.htm">&lt; 洞穴项目</a> |
+<a href="manual16.htm">索引 &gt;</a> 
 
 </body></html>
+
