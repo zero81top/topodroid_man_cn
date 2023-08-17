@@ -1,29 +1,26 @@
 <html><body>
+<h4>测点精度</h4>
 
-<h4>SHOT ACCURACY</h4>
+与每次测点一起，DistoX2也会记录并传输磁场强度（任意单位）、重力场强度（任意单位）的值，以及磁场与水平面所成的倾角。<br><p>
 
-Together with each shot, the DistoX2 records and transmits also the values of the intensity of the magnetic field (arbitrary units), that of the gravitational field (arbitrary units), and the dip angle, that is the angle the magnetic field makes with the horizontal plane.<br><p>
+通过将这些值与它们的平均值进行比较，TopoDroid可以检测一个测点是否可能受到某些异常的影响，因此应该重新进行。这些不可靠的测点将以红色背景显示。<br><p>
 
-By comparing these values with their average values TopoDroid can detect whether a shot might be affected by some anomaly, and should therefore be redone. These unreliable shots are displayed with a red background.<br><p>
+在测点被声明为不可靠之前，这些值可以与它们的平均值有多少不同，这是由精度设置指定的。<br><p>
 
-The amount these values can differ from their averages before the shot is declared unreliable are specified by the accuracy settings.<br><p>
+<b>注意</b> 在具有磁性异常的区域进行测量时，基于磁场的异常分析是无效的。<br><p>
 
-<b>Note</b> When surveying in an area with magnetic anomaly, the anomaly analysis based on the magnetic field is not valid.<br><p>
-
-<h4>Accuracy settings</h4>
+<h4>精度设置</h4>
 
 <ul style="margin-top:0; margin-bottom:0">
-<li><i>Acceleration</i>: percent difference of the acceleration from its mean value, above which a shot is signalled anomalous (only DistoX2)</li>
-<li><i>Magnetic</i>: percent difference of the magnetic field from its mean value, above which a shot is signalled anomalous (only DistoX2)</li>
-<li><i>Dip angle</i>: difference of the magnetic dip from its mean value, above which a shot is signalled anomalous (only DistoX2) [units degrees]</li>
-<li><i>Sibling threshold</i>: percent difference of leg values to identify two legs as "bad" siblings</li> 
+<li><i>重力加速度（A）</i>：重力加速度与其平均值的百分比差异，超过此差异，测点将被标记为异常（仅限DistoX2及DistoXBLE）</li>
+<li><i>磁场强度（M）</i>：磁场强度与其平均值的百分比差异，超过此差异，测点将被标记为异常（仅限DistoX2及DistoXBLE）</li>
+<li><i>磁场倾角（D）</i>：磁场倾角与其平均值的差异，超过此差异，测点将被标记为异常（仅限DistoX2及DistoXBLE）[单位：度]</li>
+<li><i>复测主线阈值</i>：用于识别两条主线为“错误”复测主线的主线值的百分比差异</li> 
 </ul>
 <br><p>
 
-<b>Sibling</b><br>
-Siblings are legs with same stations.<br>
-In principle the leg between two stations can be measured two or more times, even backwards,
-in particular if one measure foresight and backsight.
+<b>复测主线</b><br>
+复测主线是具有相同测站的主线。<br>
+原则上，两个测站之间的主线可以测量两次或更多次，甚至可以反向测量，特别是如果进行正视和倒视的一次测量。
 <br><p>
-
 </body></html>
